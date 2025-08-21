@@ -1,0 +1,3329 @@
+{
+  "test_run_time": "2025-08-18T01:37:45.417988",
+  "total_tests": 13,
+  "successful_tests": 13,
+  "results": [
+    {
+      "endpoint": "/health",
+      "description": "API Health Check",
+      "status": "success",
+      "tracks_found": 0,
+      "total_available": 0,
+      "data": {
+        "status": "healthy",
+        "timestamp": "2025-08-18T01:37:41.011715",
+        "version": "1.0.0",
+        "database": "connected",
+        "spotify_api": "connected",
+        "last_snapshot_date": "2025-08-18T00:00:00",
+        "last_aggregate_date": null,
+        "cache_status": "active (0 items)"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/2020?query=bollywood&limit=10",
+      "description": "Top Bollywood tracks from 2020",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 100,
+      "data": {
+        "year": 2020,
+        "query": "bollywood",
+        "total": 100,
+        "tracks": [
+          {
+            "id": "2PvaburAUlhNHxVhw5lvOq",
+            "name": "Humdard (From \"Ek Villain\")",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "1WwkojG9sjMSrFVz4D51W0",
+              "name": "Ultimate Love Songs - Arijit Singh",
+              "release_date": "2020-05-19"
+            },
+            "popularity": 77,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2PvaburAUlhNHxVhw5lvOq"
+            },
+            "duration_ms": 260590,
+            "preview_url": null
+          },
+          {
+            "id": "1smFN2CLqGROu0J0UyvDfL",
+            "name": "Shayad",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "6IXfWhC7omotM4lt0ROmEr",
+              "name": "Love Aaj Kal (Original Motion Picture Soundtrack)",
+              "release_date": "2020-02-14"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1smFN2CLqGROu0J0UyvDfL"
+            },
+            "duration_ms": 247941,
+            "preview_url": null
+          },
+          {
+            "id": "6cUOiOY5qh2FpIQWIYAd2h",
+            "name": "Mehrama",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "2GoeZ0qOTt6kjsWW4eA6LS",
+                "name": "Darshan Raval"
+              },
+              {
+                "id": "2UwDJeoMqYers5Jmm75zm2",
+                "name": "Antara Mitra"
+              }
+            ],
+            "album": {
+              "id": "6IXfWhC7omotM4lt0ROmEr",
+              "name": "Love Aaj Kal (Original Motion Picture Soundtrack)",
+              "release_date": "2020-02-14"
+            },
+            "popularity": 73,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6cUOiOY5qh2FpIQWIYAd2h"
+            },
+            "duration_ms": 249415,
+            "preview_url": null
+          },
+          {
+            "id": "7y5t2ePdh0lAejWJ8vPSuP",
+            "name": "Jaan Ban Gaye - From \"Khuda Haafiz\"",
+            "artists": [
+              {
+                "id": "1sVmXkzX2ukc6QvasrDBES",
+                "name": "Asees Kaur"
+              },
+              {
+                "id": "09UmIX92EUH9hAK4bxvHx6",
+                "name": "Mithoon"
+              },
+              {
+                "id": "5wJ1H6ud777odtZl5gG507",
+                "name": "Vishal Mishra"
+              }
+            ],
+            "album": {
+              "id": "0pTiclHjaVSmSkmGj0Hvnt",
+              "name": "Jaan Ban Gaye (From \"Khuda Haafiz\")",
+              "release_date": "2020-07-29"
+            },
+            "popularity": 70,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/7y5t2ePdh0lAejWJ8vPSuP"
+            },
+            "duration_ms": 211673,
+            "preview_url": null
+          },
+          {
+            "id": "4xmkpE1Si5JL7NFxWrhV0S",
+            "name": "Humraah (From \"Malang - Unleash The Madness\")",
+            "artists": [
+              {
+                "id": "6WOdPJmexxFINcKMkP2jMG",
+                "name": "Sachet Tandon"
+              },
+              {
+                "id": "52XgeWw24o4klNdfwvB0Vx",
+                "name": "Kunaal Vermaa"
+              },
+              {
+                "id": "6kNlPxUqmZMUyeGRMrWnuQ",
+                "name": "The Fusion Project"
+              }
+            ],
+            "album": {
+              "id": "1R72FwrqoofsuAM2xil26G",
+              "name": "Humraah (From \"Malang - Unleash The Madness\")",
+              "release_date": "2020-01-23"
+            },
+            "popularity": 69,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4xmkpE1Si5JL7NFxWrhV0S"
+            },
+            "duration_ms": 299821,
+            "preview_url": null
+          },
+          {
+            "id": "5I2wbDvSI98HLVB42YO9sU",
+            "name": "Lagdi Lahore Di (From \"Street Dancer 3D\")",
+            "artists": [
+              {
+                "id": "5rQoBDKFnd1n6BkdbgVaRL",
+                "name": "Guru Randhawa"
+              },
+              {
+                "id": "0T1CMVkqffHlqEk4BcAph1",
+                "name": "Tulsi Kumar"
+              }
+            ],
+            "album": {
+              "id": "1PQ8K9syD1KiKORuiRWF1w",
+              "name": "Lagdi Lahore Di (From \"Street Dancer 3D\")",
+              "release_date": "2020-01-15"
+            },
+            "popularity": 67,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5I2wbDvSI98HLVB42YO9sU"
+            },
+            "duration_ms": 215368,
+            "preview_url": null
+          },
+          {
+            "id": "4RCd3Gdtt3dNedof64hqRD",
+            "name": "Phir Mohabbat (From \"Murder 2\")",
+            "artists": [
+              {
+                "id": "6QtJ6BVdj43aDpgjnVp2tY",
+                "name": "Mohammed Irfan"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "0HIpVOzrDwqiI5wP56soMK",
+                "name": "Saim Bhat"
+              }
+            ],
+            "album": {
+              "id": "1WwkojG9sjMSrFVz4D51W0",
+              "name": "Ultimate Love Songs - Arijit Singh",
+              "release_date": "2020-05-19"
+            },
+            "popularity": 66,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4RCd3Gdtt3dNedof64hqRD"
+            },
+            "duration_ms": 329851,
+            "preview_url": null
+          },
+          {
+            "id": "2y0hUGvHaKm2p5xmJF4HBe",
+            "name": "Saware (From \"Phantom\")",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "1WwkojG9sjMSrFVz4D51W0",
+              "name": "Ultimate Love Songs - Arijit Singh",
+              "release_date": "2020-05-19"
+            },
+            "popularity": 65,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2y0hUGvHaKm2p5xmJF4HBe"
+            },
+            "duration_ms": 321613,
+            "preview_url": null
+          },
+          {
+            "id": "0ZyJDDqBjI0rDnn31qHgbg",
+            "name": "Roke Na Ruke Naina (From \"Badrinath Ki Dulhania\")",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "1WwkojG9sjMSrFVz4D51W0",
+              "name": "Ultimate Love Songs - Arijit Singh",
+              "release_date": "2020-05-19"
+            },
+            "popularity": 65,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0ZyJDDqBjI0rDnn31qHgbg"
+            },
+            "duration_ms": 278401,
+            "preview_url": null
+          },
+          {
+            "id": "25MPTnqXQB1H6OkwSYUXWx",
+            "name": "Malang (Title Track) [From \"Malang - Unleash The Madness\"]",
+            "artists": [
+              {
+                "id": "7uX1emIGgmfAgtHNRAK50Z",
+                "name": "Ved Sharma"
+              },
+              {
+                "id": "52XgeWw24o4klNdfwvB0Vx",
+                "name": "Kunaal Vermaa"
+              }
+            ],
+            "album": {
+              "id": "6mMs3cpaMLQP3cOLG4wYRy",
+              "name": "Malang (Title Track) [From \"Malang - Unleash The Madness\"]",
+              "release_date": "2020-01-16"
+            },
+            "popularity": 64,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/25MPTnqXQB1H6OkwSYUXWx"
+            },
+            "duration_ms": 287374,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:41.318141"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/2015?query=hindi&limit=10",
+      "description": "Hindi tracks from 2015",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 100,
+      "data": {
+        "year": 2015,
+        "query": "hindi",
+        "total": 100,
+        "tracks": [
+          {
+            "id": "32765xcLM1fd6wQIpkN9A0",
+            "name": "Hasi - Male Version",
+            "artists": [
+              {
+                "id": "5ugsiK49gIkIVh8U93EO0z",
+                "name": "Ami Mishra"
+              },
+              {
+                "id": "52XgeWw24o4klNdfwvB0Vx",
+                "name": "Kunaal Vermaa"
+              }
+            ],
+            "album": {
+              "id": "7sVzilmsqYcLMYw2gtvoZM",
+              "name": "Hamari Adhuri Kahani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-05-21"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/32765xcLM1fd6wQIpkN9A0"
+            },
+            "duration_ms": 272668,
+            "preview_url": null
+          },
+          {
+            "id": "1cmZbGkCEVVAck2MsWpPYQ",
+            "name": "Hasi - Female Version",
+            "artists": [
+              {
+                "id": "5ugsiK49gIkIVh8U93EO0z",
+                "name": "Ami Mishra"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "52XgeWw24o4klNdfwvB0Vx",
+                "name": "Kunaal Vermaa"
+              }
+            ],
+            "album": {
+              "id": "7sVzilmsqYcLMYw2gtvoZM",
+              "name": "Hamari Adhuri Kahani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-05-21"
+            },
+            "popularity": 70,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1cmZbGkCEVVAck2MsWpPYQ"
+            },
+            "duration_ms": 192186,
+            "preview_url": null
+          },
+          {
+            "id": "3HiobOOpSpMsi95WBKPBYk",
+            "name": "Hamari Adhuri Kahani (Title Track)",
+            "artists": [
+              {
+                "id": "2kkQthS9OLpK4UqNWYqoVl",
+                "name": "Jeet Gannguli"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "5r2baeTwcCJnuIsDIlxUJo",
+                "name": "Rashmi Virag"
+              }
+            ],
+            "album": {
+              "id": "7sVzilmsqYcLMYw2gtvoZM",
+              "name": "Hamari Adhuri Kahani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-05-21"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3HiobOOpSpMsi95WBKPBYk"
+            },
+            "duration_ms": 398799,
+            "preview_url": null
+          },
+          {
+            "id": "4km0RUkMMFdx8iDuq36o2w",
+            "name": "Janam Janam",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "2UwDJeoMqYers5Jmm75zm2",
+                "name": "Antara Mitra"
+              }
+            ],
+            "album": {
+              "id": "09AmTEo0Po8vC2WDcpviAT",
+              "name": "Dilwale (Original Motion Picture Soundtrack)",
+              "release_date": "2015-11-17"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4km0RUkMMFdx8iDuq36o2w"
+            },
+            "duration_ms": 237896,
+            "preview_url": null
+          },
+          {
+            "id": "5lLRB1nnTy1p8nFaH1Vdyf",
+            "name": "Humnava",
+            "artists": [
+              {
+                "id": "09UmIX92EUH9hAK4bxvHx6",
+                "name": "Mithoon"
+              },
+              {
+                "id": "2FPwX3Gh0w4Qr1v3zSTtcT",
+                "name": "Papon"
+              }
+            ],
+            "album": {
+              "id": "7sVzilmsqYcLMYw2gtvoZM",
+              "name": "Hamari Adhuri Kahani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-05-21"
+            },
+            "popularity": 62,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5lLRB1nnTy1p8nFaH1Vdyf"
+            },
+            "duration_ms": 328854,
+            "preview_url": null
+          },
+          {
+            "id": "59GU2OeltZirxzBLa7m5GC",
+            "name": "Deewani Mastani",
+            "artists": [
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "59fYphinaqBfGBtrQ4p9Hv",
+                "name": "Ganesh Chandanshive"
+              },
+              {
+                "id": "2yxX2XZyWVBpVX3pNaG0UF",
+                "name": "Mujtaba Aziz Naza"
+              },
+              {
+                "id": "6WixbETKEXH0xBf0OB9kRB",
+                "name": "Shadab Faridi"
+              },
+              {
+                "id": "38IHJBGBuaYXHEkIQd4DtF",
+                "name": "Altamash Faridi"
+              },
+              {
+                "id": "2S7i3wOcMLQHH6DwcMHrG9",
+                "name": "Farhan Sabri"
+              },
+              {
+                "id": "6k6TIai4KyKG1DeIMftSmJ",
+                "name": "Siddharth - Garima"
+              },
+              {
+                "id": "366Kw1KytFvqzVleCx96IB",
+                "name": "Nasir Faraaz"
+              }
+            ],
+            "album": {
+              "id": "4IDvzBMT5s2yJIMg6kqkhD",
+              "name": "Bajirao Mastani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-11-25"
+            },
+            "popularity": 62,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/59GU2OeltZirxzBLa7m5GC"
+            },
+            "duration_ms": 339707,
+            "preview_url": null
+          },
+          {
+            "id": "7iLA6PQeQWRjLDHOJgGpj5",
+            "name": "Gerua",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "2UwDJeoMqYers5Jmm75zm2",
+                "name": "Antara Mitra"
+              }
+            ],
+            "album": {
+              "id": "09AmTEo0Po8vC2WDcpviAT",
+              "name": "Dilwale (Original Motion Picture Soundtrack)",
+              "release_date": "2015-11-17"
+            },
+            "popularity": 63,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/7iLA6PQeQWRjLDHOJgGpj5"
+            },
+            "duration_ms": 345558,
+            "preview_url": null
+          },
+          {
+            "id": "5LbL7KrIbaxHDXMhRsGYiz",
+            "name": "Mohe Rang Do Laal",
+            "artists": [
+              {
+                "id": "2hxDtWT09locLUsjCoHCMZ",
+                "name": "Birju Maharaj"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "6k6TIai4KyKG1DeIMftSmJ",
+                "name": "Siddharth - Garima"
+              }
+            ],
+            "album": {
+              "id": "4IDvzBMT5s2yJIMg6kqkhD",
+              "name": "Bajirao Mastani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-11-25"
+            },
+            "popularity": 53,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5LbL7KrIbaxHDXMhRsGYiz"
+            },
+            "duration_ms": 231837,
+            "preview_url": null
+          },
+          {
+            "id": "6JhMv5GLBtTlGmoKreV90Y",
+            "name": "Teri Khushboo - Male",
+            "artists": [
+              {
+                "id": "2kkQthS9OLpK4UqNWYqoVl",
+                "name": "Jeet Gannguli"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "5r2baeTwcCJnuIsDIlxUJo",
+                "name": "Rashmi Virag"
+              }
+            ],
+            "album": {
+              "id": "3e3ZKoA9RTy6QZxKrb1vP0",
+              "name": "Mr. X (Original Motion Picture Soundtrack)",
+              "release_date": "2015-03-30"
+            },
+            "popularity": 49,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6JhMv5GLBtTlGmoKreV90Y"
+            },
+            "duration_ms": 342217,
+            "preview_url": null
+          },
+          {
+            "id": "2I6uwgP65yCBlPwwHuPw1L",
+            "name": "Aaj Ibaadat",
+            "artists": [
+              {
+                "id": "5diMmmNkRVfgUnXJrzXzjZ",
+                "name": "Javed Bashir"
+              },
+              {
+                "id": "6WixbETKEXH0xBf0OB9kRB",
+                "name": "Shadab Faridi"
+              },
+              {
+                "id": "38IHJBGBuaYXHEkIQd4DtF",
+                "name": "Altamash Faridi"
+              },
+              {
+                "id": "3RDOiwcPufckpVDe8iAt94",
+                "name": "Shashi Suman"
+              },
+              {
+                "id": "5o36rLQd78Zh8CaT8rn59d",
+                "name": "Shreyas Puranik"
+              },
+              {
+                "id": "7uvFUOwVvse3izyeVufnl9",
+                "name": "A.M. Turaz"
+              }
+            ],
+            "album": {
+              "id": "4IDvzBMT5s2yJIMg6kqkhD",
+              "name": "Bajirao Mastani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-11-25"
+            },
+            "popularity": 49,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2I6uwgP65yCBlPwwHuPw1L"
+            },
+            "duration_ms": 284452,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:41.555138"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/2010?query=india&limit=10",
+      "description": "Indian tracks from 2010",
+      "status": "success",
+      "tracks_found": 5,
+      "total_available": 109,
+      "data": {
+        "year": 2010,
+        "query": "india",
+        "total": 109,
+        "tracks": [
+          {
+            "id": "7joi9gjNw6pXLUnTgu7iRd",
+            "name": "Morya Re Bappa Morya Re - India Celebrates In Harmony",
+            "artists": [
+              {
+                "id": "1SJOL9HJ08YOn92lFcYf8a",
+                "name": "Shankar Mahadevan"
+              }
+            ],
+            "album": {
+              "id": "2Er51b5qzPkgjkaykLsJca",
+              "name": "Celebration",
+              "release_date": "2010-02-26"
+            },
+            "popularity": 47,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/7joi9gjNw6pXLUnTgu7iRd"
+            },
+            "duration_ms": 310346,
+            "preview_url": null
+          },
+          {
+            "id": "52itZ0w0CydihB2JCZEIft",
+            "name": "Pee Loon",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "5GnnSrwNCGyfAU4zuIytiS",
+                "name": "Mohit Chauhan"
+              },
+              {
+                "id": "3GdSQUH1BRtl9UrrtuwJlP",
+                "name": "Irshad Kamil"
+              }
+            ],
+            "album": {
+              "id": "4ceWEQarPyTyeb9TUeyLOG",
+              "name": "Once Upon A Time In Mumbaai",
+              "release_date": "2010-06-29"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/52itZ0w0CydihB2JCZEIft"
+            },
+            "duration_ms": 285686,
+            "preview_url": null
+          },
+          {
+            "id": "4JecByqhyRbulFQqsUx1wg",
+            "name": "Kajra Kajra Kajraare",
+            "artists": [
+              {
+                "id": "0sSxphmGskGCKlwB9xa6WU",
+                "name": "Himesh Reshammiya"
+              },
+              {
+                "id": "3eDT9fwXKuHWFvgZaaYC5v",
+                "name": "Sunidhi Chauhan"
+              }
+            ],
+            "album": {
+              "id": "5ZopWz1AlsPvqoQoWRqrpN",
+              "name": "Kajraare",
+              "release_date": "2010-06-01"
+            },
+            "popularity": 41,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4JecByqhyRbulFQqsUx1wg"
+            },
+            "duration_ms": 274705,
+            "preview_url": null
+          },
+          {
+            "id": "2iZeKe5avjtKVmjfSFkpxd",
+            "name": "Tum Jo Aaye",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "3OLGltG8UPIea8sA4w0yg0",
+                "name": "Rahat Fateh Ali Khan"
+              },
+              {
+                "id": "0T1CMVkqffHlqEk4BcAph1",
+                "name": "Tulsi Kumar"
+              },
+              {
+                "id": "3GdSQUH1BRtl9UrrtuwJlP",
+                "name": "Irshad Kamil"
+              }
+            ],
+            "album": {
+              "id": "4ceWEQarPyTyeb9TUeyLOG",
+              "name": "Once Upon A Time In Mumbaai",
+              "release_date": "2010-06-29"
+            },
+            "popularity": 73,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2iZeKe5avjtKVmjfSFkpxd"
+            },
+            "duration_ms": 286443,
+            "preview_url": null
+          },
+          {
+            "id": "3bZPdEskcnMdepwCaDSJRl",
+            "name": "Bin Tere",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "5SuRAj1A9FEHj5NxS86YAm",
+                "name": "Shafqat Amanat Ali"
+              },
+              {
+                "id": "3eDT9fwXKuHWFvgZaaYC5v",
+                "name": "Sunidhi Chauhan"
+              }
+            ],
+            "album": {
+              "id": "4SPHfSWibeoFCSdR4vd5QL",
+              "name": "I Hate Luv Storys (Original Motion Picture Soundtrack)",
+              "release_date": "2010-05-25"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3bZPdEskcnMdepwCaDSJRl"
+            },
+            "duration_ms": 330360,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": null,
+        "fetched_at": "2025-08-18T01:37:41.810021"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/2005?query=bollywood&limit=10",
+      "description": "Bollywood tracks from 2005",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 100,
+      "data": {
+        "year": 2005,
+        "query": "bollywood",
+        "total": 100,
+        "tracks": [
+          {
+            "id": "5VrLz2NUTLbPzgjuVOjxUx",
+            "name": "Aadat - From \"Kalyug\"",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              },
+              {
+                "id": "2f50lwdTtShldrc5JrA5fU",
+                "name": "Jal"
+              },
+              {
+                "id": "09UmIX92EUH9hAK4bxvHx6",
+                "name": "Mithoon"
+              }
+            ],
+            "album": {
+              "id": "5NHOGuFSC9lqfkp54IMWVn",
+              "name": "Kalyug (Original Motion Picture Soundtrack)",
+              "release_date": "2005-12-09"
+            },
+            "popularity": 73,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5VrLz2NUTLbPzgjuVOjxUx"
+            },
+            "duration_ms": 333740,
+            "preview_url": null
+          },
+          {
+            "id": "21kImg7AxLbl7rrciuAwoB",
+            "name": "Woh Lamhe Woh Baatein - From \"Zeher\"",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              },
+              {
+                "id": "03SZmfKAgYRQKUwy0EoJUa",
+                "name": "Roop Kumar Rathod"
+              },
+              {
+                "id": "09UmIX92EUH9hAK4bxvHx6",
+                "name": "Mithoon"
+              },
+              {
+                "id": "3nFgnEel499wKuPnnSlPs3",
+                "name": "Naresh Sharma"
+              }
+            ],
+            "album": {
+              "id": "03hSlhbMJkjeqFjEd22WDa",
+              "name": "Zeher (Original Motion Picture Soundtrack)",
+              "release_date": "2005-03-25"
+            },
+            "popularity": 69,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/21kImg7AxLbl7rrciuAwoB"
+            },
+            "duration_ms": 320040,
+            "preview_url": null
+          },
+          {
+            "id": "43SKg10CCeaoyr7XSKfpTR",
+            "name": "Jhalak Dikhla Ja",
+            "artists": [
+              {
+                "id": "0sSxphmGskGCKlwB9xa6WU",
+                "name": "Himesh Reshammiya"
+              }
+            ],
+            "album": {
+              "id": "3OAL3HUd1JbRyHyb4prNfo",
+              "name": "Aksar",
+              "release_date": "2005-12-21"
+            },
+            "popularity": 65,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/43SKg10CCeaoyr7XSKfpTR"
+            },
+            "duration_ms": 317560,
+            "preview_url": null
+          },
+          {
+            "id": "35Rrbt58ADLxyo1lu7xhZu",
+            "name": "Aap Ki Kashish",
+            "artists": [
+              {
+                "id": "0sSxphmGskGCKlwB9xa6WU",
+                "name": "Himesh Reshammiya"
+              },
+              {
+                "id": "3cY5ariKFsYqoHm8n2ccvD",
+                "name": "Krishna Beuraa"
+              },
+              {
+                "id": "4l7j5oBc7ZGtAyPhokk2xx",
+                "name": "Ahir"
+              }
+            ],
+            "album": {
+              "id": "6Snn2Mwp5ikFynRJz3V14x",
+              "name": "Aashiq Banaya Aapne",
+              "release_date": "2005-07-29"
+            },
+            "popularity": 64,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/35Rrbt58ADLxyo1lu7xhZu"
+            },
+            "duration_ms": 333653,
+            "preview_url": null
+          },
+          {
+            "id": "5O4AGvOVFSs5ipu3iNOuoi",
+            "name": "Soniye",
+            "artists": [
+              {
+                "id": "4fEkbug6kZzzJ8eYX6Kbbp",
+                "name": "KK"
+              },
+              {
+                "id": "3eDT9fwXKuHWFvgZaaYC5v",
+                "name": "Sunidhi Chauhan"
+              }
+            ],
+            "album": {
+              "id": "3OAL3HUd1JbRyHyb4prNfo",
+              "name": "Aksar",
+              "release_date": "2005-12-21"
+            },
+            "popularity": 63,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5O4AGvOVFSs5ipu3iNOuoi"
+            },
+            "duration_ms": 296720,
+            "preview_url": null
+          },
+          {
+            "id": "3Uv8BQFN3bQfhkregyMbnx",
+            "name": "My Dil Goes Mmmm",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "5cB4d4jPYjMT326sjihQ4m",
+                "name": "Shaan"
+              },
+              {
+                "id": "6dgPKPKtpOXxPpMe8STn1N",
+                "name": "Gayatri Iyer"
+              },
+              {
+                "id": "5kPOMQZvgkAEnRZqwn9SYQ",
+                "name": "Jaideep Sahni"
+              }
+            ],
+            "album": {
+              "id": "2IENY924rGfG14TIQIdZFr",
+              "name": "Salaam Namaste",
+              "release_date": "2005-08-03"
+            },
+            "popularity": 64,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3Uv8BQFN3bQfhkregyMbnx"
+            },
+            "duration_ms": 452832,
+            "preview_url": null
+          },
+          {
+            "id": "3vqJY3pVELLIxqXXyI08yr",
+            "name": "Roobaroo",
+            "artists": [
+              {
+                "id": "1mYsTxnqsietFxj1OgoGbG",
+                "name": "A.R. Rahman"
+              },
+              {
+                "id": "7FaGCZiP3s6X7jQTB8EhfI",
+                "name": "Naresh Iyer"
+              }
+            ],
+            "album": {
+              "id": "0NKNDn80mhKn4Xi6nHrsqQ",
+              "name": "Rang De Basanti (Original Motion Picture Soundtrack)",
+              "release_date": "2005-12-04"
+            },
+            "popularity": 62,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3vqJY3pVELLIxqXXyI08yr"
+            },
+            "duration_ms": 282973,
+            "preview_url": null
+          },
+          {
+            "id": "1ZpsPt7Ayxhd35QXHdLGEY",
+            "name": "Dil Dil Nazar",
+            "artists": [
+              {
+                "id": "5cB4d4jPYjMT326sjihQ4m",
+                "name": "Shaan"
+              },
+              {
+                "id": "1vKAthxJWQmTEcB1ZVqUGB",
+                "name": "Neeraj"
+              },
+              {
+                "id": "4qiiwDv76O8pI8hqppXGTS",
+                "name": "Shaznine"
+              }
+            ],
+            "album": {
+              "id": "6nyWgwT9ZHj85XYpLtrIs9",
+              "name": "Maine Pyaar Kyun Kiya",
+              "release_date": "2005-05-24"
+            },
+            "popularity": 59,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1ZpsPt7Ayxhd35QXHdLGEY"
+            },
+            "duration_ms": 323053,
+            "preview_url": null
+          },
+          {
+            "id": "0d54B7VI12WOMK8AoIWllf",
+            "name": "Aashayein",
+            "artists": [
+              {
+                "id": "4fEkbug6kZzzJ8eYX6Kbbp",
+                "name": "KK"
+              },
+              {
+                "id": "1TbRSunWGZ46mqnapcWxrm",
+                "name": "Salim Merchant"
+              }
+            ],
+            "album": {
+              "id": "4D3xYBNQoLgpUhmsH5A0Ld",
+              "name": "Iqbal (Original Motion Picture Soundtrack)",
+              "release_date": "2005-08-26"
+            },
+            "popularity": 59,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0d54B7VI12WOMK8AoIWllf"
+            },
+            "duration_ms": 260142,
+            "preview_url": null
+          },
+          {
+            "id": "5fb9ousSK0rPQdXDIinpO1",
+            "name": "Jiya Dhadak Dhadak Jaye - From \"Kalyug\"",
+            "artists": [
+              {
+                "id": "3OLGltG8UPIea8sA4w0yg0",
+                "name": "Rahat Fateh Ali Khan"
+              },
+              {
+                "id": "2coWJ1vqnp7z8eh0Vd5gPl",
+                "name": "Rohail Hyatt"
+              },
+              {
+                "id": "4RD36PYVvbMaJXgUHJztC1",
+                "name": "Faisal Rafi"
+              }
+            ],
+            "album": {
+              "id": "5NHOGuFSC9lqfkp54IMWVn",
+              "name": "Kalyug (Original Motion Picture Soundtrack)",
+              "release_date": "2005-12-09"
+            },
+            "popularity": 59,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5fb9ousSK0rPQdXDIinpO1"
+            },
+            "duration_ms": 319480,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:42.052999"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/2000?query=hindi&limit=10",
+      "description": "Hindi tracks from year 2000",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 40,
+      "data": {
+        "year": 2000,
+        "query": "hindi",
+        "total": 40,
+        "tracks": [
+          {
+            "id": "2oVJZVH1hlxP3MxyDFRSEb",
+            "name": "Neend Churayee Meri",
+            "artists": [
+              {
+                "id": "4K6blSRoklNdpw4mzLxwfn",
+                "name": "Kumar Sanu"
+              },
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              },
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              },
+              {
+                "id": "6WPmTGeeoymoVlXVtsCwz7",
+                "name": "Kavita Krishnamurthy"
+              }
+            ],
+            "album": {
+              "id": "5kIIShUL1dcx3W9ZYoCd1H",
+              "name": "Ishq (Original Motion Picture Soundtrack)",
+              "release_date": "2000-08-03"
+            },
+            "popularity": 65,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2oVJZVH1hlxP3MxyDFRSEb"
+            },
+            "duration_ms": 346720,
+            "preview_url": null
+          },
+          {
+            "id": "6ttvgWnBAt72SIojbcnlKn",
+            "name": "Ajnabi Mujhko Itna Bata",
+            "artists": [
+              {
+                "id": "4YgUVg4p7xtMOrOS4GjiJZ",
+                "name": "Jatin-Lalit"
+              },
+              {
+                "id": "5as8A4G47Ohu9NSWs3Je8U",
+                "name": "Asha Bhosle"
+              },
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              }
+            ],
+            "album": {
+              "id": "6pEHb1MG9U5UZJK0rQ2OUX",
+              "name": "Pyaar To Hona Hi Tha (Original Motion Picture Soundtrack)",
+              "release_date": "2000-08-04"
+            },
+            "popularity": 61,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6ttvgWnBAt72SIojbcnlKn"
+            },
+            "duration_ms": 373800,
+            "preview_url": null
+          },
+          {
+            "id": "38ql2maaz4VFexTGL8yIW3",
+            "name": "Jab Kisiki Taraf Dil",
+            "artists": [
+              {
+                "id": "4YgUVg4p7xtMOrOS4GjiJZ",
+                "name": "Jatin-Lalit"
+              },
+              {
+                "id": "4K6blSRoklNdpw4mzLxwfn",
+                "name": "Kumar Sanu"
+              }
+            ],
+            "album": {
+              "id": "6pEHb1MG9U5UZJK0rQ2OUX",
+              "name": "Pyaar To Hona Hi Tha (Original Motion Picture Soundtrack)",
+              "release_date": "2000-08-04"
+            },
+            "popularity": 63,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/38ql2maaz4VFexTGL8yIW3"
+            },
+            "duration_ms": 414560,
+            "preview_url": null
+          },
+          {
+            "id": "0MqSxYSUh87DUym76Yrhs9",
+            "name": "Pyar Dilon Ka Mela Hai",
+            "artists": [
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              },
+              {
+                "id": "1dVygo6tRFXC8CSWURQJq2",
+                "name": "Sonu Nigam"
+              }
+            ],
+            "album": {
+              "id": "0yqgWYAmA0xelcrd7ujhvd",
+              "name": "Dulhan Hum Le Jayenge (Original Motion Picture Soundtrack)",
+              "release_date": "2000-01-15"
+            },
+            "popularity": 56,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0MqSxYSUh87DUym76Yrhs9"
+            },
+            "duration_ms": 297946,
+            "preview_url": null
+          },
+          {
+            "id": "4eGvkvURACcS8kFqSCf0Ip",
+            "name": "Ishq Hua Kaise Hua",
+            "artists": [
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              },
+              {
+                "id": "6wJ7W2eCXSRjAqAqrrOCKS",
+                "name": "Vibha Sharma"
+              }
+            ],
+            "album": {
+              "id": "5kIIShUL1dcx3W9ZYoCd1H",
+              "name": "Ishq (Original Motion Picture Soundtrack)",
+              "release_date": "2000-08-03"
+            },
+            "popularity": 56,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4eGvkvURACcS8kFqSCf0Ip"
+            },
+            "duration_ms": 454666,
+            "preview_url": null
+          },
+          {
+            "id": "28syjZyasVJ4J4oxBDOF1b",
+            "name": "Bumbro",
+            "artists": [
+              {
+                "id": "1SJOL9HJ08YOn92lFcYf8a",
+                "name": "Shankar Mahadevan"
+              },
+              {
+                "id": "3eDT9fwXKuHWFvgZaaYC5v",
+                "name": "Sunidhi Chauhan"
+              },
+              {
+                "id": "4qf5iWCSqeCW9TlbwO58bo",
+                "name": "Jaspinder Narula"
+              }
+            ],
+            "album": {
+              "id": "2LUvOogY4Oeawid4gAApUY",
+              "name": "Mission Kashmir (Original Motion Picture Soundtrack)",
+              "release_date": "2000-10-27"
+            },
+            "popularity": 55,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/28syjZyasVJ4J4oxBDOF1b"
+            },
+            "duration_ms": 308493,
+            "preview_url": null
+          },
+          {
+            "id": "0D0lefqSgNAAoXfuQgsRUo",
+            "name": "Aaja Mahiya",
+            "artists": [
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              },
+              {
+                "id": "0WUykTmuOcYbFgu3L6lO0L",
+                "name": "Prasanta A Samadhar"
+              },
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              }
+            ],
+            "album": {
+              "id": "70pmpUOtbnOc5YtuH20ehU",
+              "name": "Fiza (Original Motion Picture Soundtrack)",
+              "release_date": "2000-09-08"
+            },
+            "popularity": 53,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0D0lefqSgNAAoXfuQgsRUo"
+            },
+            "duration_ms": 402840,
+            "preview_url": null
+          },
+          {
+            "id": "7LAwdDzta1roB9n4GuVpzG",
+            "name": "Hai Mera Dil",
+            "artists": [
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              },
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              }
+            ],
+            "album": {
+              "id": "26tEuVzIVjvVn12w07hqIm",
+              "name": "Josh (Original Motion Picture Soundtrack)",
+              "release_date": "2000-04-15"
+            },
+            "popularity": 53,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/7LAwdDzta1roB9n4GuVpzG"
+            },
+            "duration_ms": 250920,
+            "preview_url": null
+          },
+          {
+            "id": "6qYtje83gTeREXYdrgXVmj",
+            "name": "Humko Tumse Pyar Hai",
+            "artists": [
+              {
+                "id": "2ZRrPOjBIWoKK5rHedLijj",
+                "name": "Abhijeet"
+              }
+            ],
+            "album": {
+              "id": "5kIIShUL1dcx3W9ZYoCd1H",
+              "name": "Ishq (Original Motion Picture Soundtrack)",
+              "release_date": "2000-08-03"
+            },
+            "popularity": 51,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6qYtje83gTeREXYdrgXVmj"
+            },
+            "duration_ms": 308066,
+            "preview_url": null
+          },
+          {
+            "id": "3FYF7GwOIsDE81mFVFrBoY",
+            "name": "Mehboob Mere",
+            "artists": [
+              {
+                "id": "3eDT9fwXKuHWFvgZaaYC5v",
+                "name": "Sunidhi Chauhan"
+              },
+              {
+                "id": "3gw3Z0HJsDvkC33QEkhnY8",
+                "name": "Karsan Sargathiya"
+              }
+            ],
+            "album": {
+              "id": "70pmpUOtbnOc5YtuH20ehU",
+              "name": "Fiza (Original Motion Picture Soundtrack)",
+              "release_date": "2000-09-08"
+            },
+            "popularity": 51,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3FYF7GwOIsDE81mFVFrBoY"
+            },
+            "duration_ms": 334000,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:42.284989"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/1995?query=bollywood&limit=10",
+      "description": "Bollywood tracks from 1995",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 100,
+      "data": {
+        "year": 1995,
+        "query": "bollywood",
+        "total": 100,
+        "tracks": [
+          {
+            "id": "735WeIIQYRfmtEdMmOgDY1",
+            "name": "Akhiyaan Milaoon Kabhi",
+            "artists": [
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              },
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              }
+            ],
+            "album": {
+              "id": "4Dj8WYLlv47T0W03zDdFJI",
+              "name": "Raja (Original Motion Picture Soundtrack)",
+              "release_date": "1995-06-23"
+            },
+            "popularity": 65,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/735WeIIQYRfmtEdMmOgDY1"
+            },
+            "duration_ms": 375266,
+            "preview_url": null
+          },
+          {
+            "id": "2JyPZNIsrL1xIoLZaqcqr1",
+            "name": "Husn Hai Suhana",
+            "artists": [
+              {
+                "id": "49ZlTVpGT3NxLkTRpPcYO2",
+                "name": "Chandana Dixit"
+              },
+              {
+                "id": "2ZRrPOjBIWoKK5rHedLijj",
+                "name": "Abhijeet"
+              }
+            ],
+            "album": {
+              "id": "3TyqFXIE6Yg7HmvzNlG3tj",
+              "name": "Coolie No.1 (Original Motion Picture Soundtrack)",
+              "release_date": "1995-06-30"
+            },
+            "popularity": 64,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2JyPZNIsrL1xIoLZaqcqr1"
+            },
+            "duration_ms": 358266,
+            "preview_url": null
+          },
+          {
+            "id": "3qbSubaQIBgUM13S7kzWOd",
+            "name": "Kisi Din Banoongi Main",
+            "artists": [
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              },
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              }
+            ],
+            "album": {
+              "id": "4Dj8WYLlv47T0W03zDdFJI",
+              "name": "Raja (Original Motion Picture Soundtrack)",
+              "release_date": "1995-06-23"
+            },
+            "popularity": 62,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3qbSubaQIBgUM13S7kzWOd"
+            },
+            "duration_ms": 438040,
+            "preview_url": null
+          },
+          {
+            "id": "1vYreQ2DeOhKFtHiGBrRuZ",
+            "name": "Main Toh Raste Se Ja Raha Tha",
+            "artists": [
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              },
+              {
+                "id": "4K6blSRoklNdpw4mzLxwfn",
+                "name": "Kumar Sanu"
+              }
+            ],
+            "album": {
+              "id": "3TyqFXIE6Yg7HmvzNlG3tj",
+              "name": "Coolie No.1 (Original Motion Picture Soundtrack)",
+              "release_date": "1995-06-30"
+            },
+            "popularity": 60,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1vYreQ2DeOhKFtHiGBrRuZ"
+            },
+            "duration_ms": 318706,
+            "preview_url": null
+          },
+          {
+            "id": "4OvdhTOjq75CvPO6O7AWRw",
+            "name": "Dil Mera Churaya Kyun",
+            "artists": [
+              {
+                "id": "4K6blSRoklNdpw4mzLxwfn",
+                "name": "Kumar Sanu"
+              },
+              {
+                "id": "71hjb5G92mGoKRSAW3Cj00",
+                "name": "Anu Malik"
+              }
+            ],
+            "album": {
+              "id": "1zwT18Vm7F5zPBNvRQp71F",
+              "name": "Akele Hum Akele Tum (Original Motion Picture Soundtrack)",
+              "release_date": "1995-07-25"
+            },
+            "popularity": 60,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4OvdhTOjq75CvPO6O7AWRw"
+            },
+            "duration_ms": 282360,
+            "preview_url": null
+          },
+          {
+            "id": "1hGj2l3qGnv33MGXqse1hQ",
+            "name": "Barsaat Ke Mausam Mein",
+            "artists": [
+              {
+                "id": "4K6blSRoklNdpw4mzLxwfn",
+                "name": "Kumar Sanu"
+              },
+              {
+                "id": "03SZmfKAgYRQKUwy0EoJUa",
+                "name": "Roop Kumar Rathod"
+              }
+            ],
+            "album": {
+              "id": "7m84dfY0n4DnoB6rGT8tuM",
+              "name": "Naajayaz (Original Motion Picture Soundtrack)",
+              "release_date": "1995-03-03"
+            },
+            "popularity": 60,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1hGj2l3qGnv33MGXqse1hQ"
+            },
+            "duration_ms": 524506,
+            "preview_url": null
+          },
+          {
+            "id": "0iG83qZ0ftWr43VggRYkp3",
+            "name": "Muqabala Muqabala",
+            "artists": [
+              {
+                "id": "3NzhVoa20crNtp1p4zE8um",
+                "name": "Mano"
+              },
+              {
+                "id": "7N0SBLJFpCyQSsv4MfRJ5d",
+                "name": "Swarnalatha"
+              }
+            ],
+            "album": {
+              "id": "3IpHQbDLRRqd9sZQncIMD9",
+              "name": "Hum Se Hai Muqabala - Kadalan (Original Motion Picture Soundtrack)",
+              "release_date": "1995-03-01"
+            },
+            "popularity": 59,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0iG83qZ0ftWr43VggRYkp3"
+            },
+            "duration_ms": 143977,
+            "preview_url": null
+          },
+          {
+            "id": "4fudUzDHbqdSA4ZUSuvOgc",
+            "name": "Love Tujhe Love Main Karta",
+            "artists": [
+              {
+                "id": "4K6blSRoklNdpw4mzLxwfn",
+                "name": "Kumar Sanu"
+              },
+              {
+                "id": "3gBKY0y3dFFVRqicLnVZYz",
+                "name": "Alka Yagnik"
+              }
+            ],
+            "album": {
+              "id": "02idAQbxu0Q6teaTiong8e",
+              "name": "Barsaat (Original Motion Picture Soundtrack)",
+              "release_date": "1995-09-29"
+            },
+            "popularity": 56,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4fudUzDHbqdSA4ZUSuvOgc"
+            },
+            "duration_ms": 346133,
+            "preview_url": null
+          },
+          {
+            "id": "50ni0N31BObNW7IVbPnLwT",
+            "name": "Dhire Dhire Aap Mere",
+            "artists": [
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              },
+              {
+                "id": "1HGMG8RHvcu1mfdM9MeTek",
+                "name": "Sadhana Sargam"
+              }
+            ],
+            "album": {
+              "id": "1LbFBl6sKXL7ST4rnfICJS",
+              "name": "Baazi",
+              "release_date": "1995-04-13"
+            },
+            "popularity": 55,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/50ni0N31BObNW7IVbPnLwT"
+            },
+            "duration_ms": 341958,
+            "preview_url": null
+          },
+          {
+            "id": "1GoRZRnNkaLGGQn0gqKP6H",
+            "name": "Tanha Tanha Yahan Pe Jeena",
+            "artists": [
+              {
+                "id": "5as8A4G47Ohu9NSWs3Je8U",
+                "name": "Asha Bhosle"
+              }
+            ],
+            "album": {
+              "id": "1Wbsq2OF6KPbGDfedG0XX6",
+              "name": "Rangeela (Original Motion Picture Soundtrack)",
+              "release_date": "1995-05-14"
+            },
+            "popularity": 53,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1GoRZRnNkaLGGQn0gqKP6H"
+            },
+            "duration_ms": 336000,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:42.512770"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/1990?query=india&limit=10",
+      "description": "Indian tracks from 1990",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 100,
+      "data": {
+        "year": 1990,
+        "query": "india",
+        "total": 100,
+        "tracks": [
+          {
+            "id": "4jzNxmqGIr2ykCacSRXyWI",
+            "name": "Mele Mele Maanam - Version, 1",
+            "artists": [
+              {
+                "id": "5phsP4vv54yJzoOuYQQKss",
+                "name": "Jerry Amaldev"
+              },
+              {
+                "id": "2wPsNCwhEGb0KvChZ5DD52",
+                "name": "K. J. Yesudas"
+              }
+            ],
+            "album": {
+              "id": "72hTD4DobfJ6dq0EiUsDWb",
+              "name": "No.1 Snehatheeram Bangalore North (Original Motion Picture Soundtrack)",
+              "release_date": "1990"
+            },
+            "popularity": 50,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4jzNxmqGIr2ykCacSRXyWI"
+            },
+            "duration_ms": 243148,
+            "preview_url": null
+          },
+          {
+            "id": "6vqIN8ZBB3Mbc6qvTb5HDF",
+            "name": "Jani Door Gaye",
+            "artists": [
+              {
+                "id": "5HcunTidTUrOaf8V0iJcvl",
+                "name": "Nusrat Fateh Ali Khan"
+              }
+            ],
+            "album": {
+              "id": "0JbYb3e1S3iMOsfRouivI1",
+              "name": "Jani Door Gaye, Vol. 7",
+              "release_date": "1990-01-01"
+            },
+            "popularity": 49,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6vqIN8ZBB3Mbc6qvTb5HDF"
+            },
+            "duration_ms": 1108246,
+            "preview_url": null
+          },
+          {
+            "id": "6yRPENb5OB1wJDUvUZGNSF",
+            "name": "Pramadhavanam",
+            "artists": [
+              {
+                "id": "2wPsNCwhEGb0KvChZ5DD52",
+                "name": "K. J. Yesudas"
+              }
+            ],
+            "album": {
+              "id": "39uzQjeBOUCsJh73ypPImk",
+              "name": "His Highness Abdulla (Original Motion Picture Soundtrack)",
+              "release_date": "1990-04-29"
+            },
+            "popularity": 47,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6yRPENb5OB1wJDUvUZGNSF"
+            },
+            "duration_ms": 347424,
+            "preview_url": null
+          },
+          {
+            "id": "6umdvJ1taGpobp2usoOkxX",
+            "name": "Pichakappoomkaavukalkkum",
+            "artists": [
+              {
+                "id": "5wq0asvXF4jyJs8ydPPFzR",
+                "name": "Ouseppachan"
+              },
+              {
+                "id": "3wjaprBWmoSJn4KP9tgkxt",
+                "name": "M. G. Sreekumar"
+              }
+            ],
+            "album": {
+              "id": "6maZJD3iJziITVcLwFUgTp",
+              "name": "No. 20 Madras Mail (Original Motion Picture Soundtrack)",
+              "release_date": "1990"
+            },
+            "popularity": 47,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6umdvJ1taGpobp2usoOkxX"
+            },
+            "duration_ms": 221023,
+            "preview_url": null
+          },
+          {
+            "id": "6tY5QQhqKXRd8qCDaTlAmg",
+            "name": "Paree",
+            "artists": [
+              {
+                "id": "5BzzAgWSH6Q4yPQOAKeWRd",
+                "name": "Suneeta Rao"
+              }
+            ],
+            "album": {
+              "id": "4ybpUVEq9QLSe6UncFUAZW",
+              "name": "Dhuan",
+              "release_date": "1990-10-01"
+            },
+            "popularity": 44,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6tY5QQhqKXRd8qCDaTlAmg"
+            },
+            "duration_ms": 361706,
+            "preview_url": null
+          },
+          {
+            "id": "0Gqo96Ip963zIQjicXHXrj",
+            "name": "Hum Pyar Karne Wale",
+            "artists": [
+              {
+                "id": "4hkB2bR5ek6lJChj6aunCn",
+                "name": "Anuradha Paudwal"
+              },
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              }
+            ],
+            "album": {
+              "id": "7fiBYVgPYxHtJv57QsyOLh",
+              "name": "Dil",
+              "release_date": "1990-06-22"
+            },
+            "popularity": 44,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0Gqo96Ip963zIQjicXHXrj"
+            },
+            "duration_ms": 417280,
+            "preview_url": null
+          },
+          {
+            "id": "2K1fwKGPBF3SBwER8H8eme",
+            "name": "Saja Hae Maikhana",
+            "artists": [
+              {
+                "id": "5HcunTidTUrOaf8V0iJcvl",
+                "name": "Nusrat Fateh Ali Khan"
+              }
+            ],
+            "album": {
+              "id": "77CR3pKybBFsgiDEVC3AbB",
+              "name": "Yadon Ke Sayeay (Geet & Ghazal), Vol. 6",
+              "release_date": "1990-01-01"
+            },
+            "popularity": 44,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2K1fwKGPBF3SBwER8H8eme"
+            },
+            "duration_ms": 486922,
+            "preview_url": null
+          },
+          {
+            "id": "26qxAKBGanpq5C6H00RyKZ",
+            "name": "Gopika Vasantham",
+            "artists": [
+              {
+                "id": "2wPsNCwhEGb0KvChZ5DD52",
+                "name": "K. J. Yesudas"
+              },
+              {
+                "id": "2IUtwMti1OiT3lkW6RubgH",
+                "name": "K. S. Chithra"
+              }
+            ],
+            "album": {
+              "id": "39uzQjeBOUCsJh73ypPImk",
+              "name": "His Highness Abdulla (Original Motion Picture Soundtrack)",
+              "release_date": "1990-04-29"
+            },
+            "popularity": 41,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/26qxAKBGanpq5C6H00RyKZ"
+            },
+            "duration_ms": 297815,
+            "preview_url": null
+          },
+          {
+            "id": "3rdN6Is5HdWSLmd2cZp4zx",
+            "name": "Is Karam Ka Karoon Shukr Kaise",
+            "artists": [
+              {
+                "id": "5HcunTidTUrOaf8V0iJcvl",
+                "name": "Nusrat Fateh Ali Khan"
+              }
+            ],
+            "album": {
+              "id": "3wfXI3o74VrMfa0YMXGYzF",
+              "name": "Gorakh Dhandha, Vol. 5",
+              "release_date": "1990-01-01"
+            },
+            "popularity": 43,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3rdN6Is5HdWSLmd2cZp4zx"
+            },
+            "duration_ms": 1199313,
+            "preview_url": null
+          },
+          {
+            "id": "4dLpQIPrQK3hKjadqhr5zs",
+            "name": "Ponnambilipottum Thottu",
+            "artists": [
+              {
+                "id": "5phsP4vv54yJzoOuYQQKss",
+                "name": "Jerry Amaldev"
+              },
+              {
+                "id": "2wPsNCwhEGb0KvChZ5DD52",
+                "name": "K. J. Yesudas"
+              }
+            ],
+            "album": {
+              "id": "72hTD4DobfJ6dq0EiUsDWb",
+              "name": "No.1 Snehatheeram Bangalore North (Original Motion Picture Soundtrack)",
+              "release_date": "1990"
+            },
+            "popularity": 39,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4dLpQIPrQK3hKjadqhr5zs"
+            },
+            "duration_ms": 267730,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:42.782217"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year/1980?query=hindi&limit=10",
+      "description": "Hindi tracks from 1980",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 20,
+      "data": {
+        "year": 1980,
+        "query": "hindi",
+        "total": 20,
+        "tracks": [
+          {
+            "id": "0Zq2n84Eplok8MnRE8P5hE",
+            "name": "Aap Jaisa Koi - From \"Qurbani\"",
+            "artists": [
+              {
+                "id": "5hW7KULTxMzCDnqaV7LASR",
+                "name": "Nazia Hassan"
+              },
+              {
+                "id": "0J3qMXOTkJBJ2dxIXjyTns",
+                "name": "Feroz Khan"
+              }
+            ],
+            "album": {
+              "id": "5XUhA9v9BBihWJBwTq2ZKs",
+              "name": "Qurbani (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 52,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0Zq2n84Eplok8MnRE8P5hE"
+            },
+            "duration_ms": 249106,
+            "preview_url": null
+          },
+          {
+            "id": "0SKjyWMX4fXxyVXkgGhdVM",
+            "name": "Hum Tumhen Chahte Hain - From \"Qurbani\"",
+            "artists": [
+              {
+                "id": "20LxVmOnMzPm716JTA7XKi",
+                "name": "Kanchan"
+              },
+              {
+                "id": "46G071hFAw7UtxmsjQEa8p",
+                "name": "Manhar"
+              },
+              {
+                "id": "53kVUvxYgxcYwhbUjqm9X6",
+                "name": "Anand"
+              }
+            ],
+            "album": {
+              "id": "5XUhA9v9BBihWJBwTq2ZKs",
+              "name": "Qurbani (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 49,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0SKjyWMX4fXxyVXkgGhdVM"
+            },
+            "duration_ms": 436026,
+            "preview_url": null
+          },
+          {
+            "id": "1DR9GU5lD7sq8TMUcCbFdm",
+            "name": "Maine Poochha Chand Se - From \"Abdullah\"",
+            "artists": [
+              {
+                "id": "0gXDpqwYNDODn7fB0RDN8J",
+                "name": "Mohammed Rafi"
+              },
+              {
+                "id": "2JSYASbWU5Y0fVpts3Eq7g",
+                "name": "R. D. Burman"
+              }
+            ],
+            "album": {
+              "id": "7vsN0eSepn8msLRLFhZods",
+              "name": "Abdullah (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 47,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1DR9GU5lD7sq8TMUcCbFdm"
+            },
+            "duration_ms": 309080,
+            "preview_url": null
+          },
+          {
+            "id": "05oQXL5mtuktNigwBOGs6y",
+            "name": "Laila O Laila - From \"Qurbani\"",
+            "artists": [
+              {
+                "id": "20LxVmOnMzPm716JTA7XKi",
+                "name": "Kanchan"
+              },
+              {
+                "id": "5l1aGNGCRGomCMHVufh6xC",
+                "name": "Amit Kumar"
+              }
+            ],
+            "album": {
+              "id": "5XUhA9v9BBihWJBwTq2ZKs",
+              "name": "Qurbani (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 47,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/05oQXL5mtuktNigwBOGs6y"
+            },
+            "duration_ms": 271600,
+            "preview_url": null
+          },
+          {
+            "id": "3UOHTbvz9Jhj08Uo8bdKhu",
+            "name": "Qurbani Qurbani - From \"Qurbani\"",
+            "artists": [
+              {
+                "id": "0GF4shudTAFv8ak9eWdd4Y",
+                "name": "Kishore Kumar"
+              },
+              {
+                "id": "5eMQOnTghov2PpzQCz9RXV",
+                "name": "Anwar"
+              },
+              {
+                "id": "4Zu560G5xegrTpbRqJRDUt",
+                "name": "Aziz Naza"
+              }
+            ],
+            "album": {
+              "id": "5XUhA9v9BBihWJBwTq2ZKs",
+              "name": "Qurbani (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 29,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3UOHTbvz9Jhj08Uo8bdKhu"
+            },
+            "duration_ms": 286453,
+            "preview_url": null
+          },
+          {
+            "id": "3mLhme6vdUX2wTgv7cVUtb",
+            "name": "Janu Meri Jaan - From \"Shaan\"",
+            "artists": [
+              {
+                "id": "0gXDpqwYNDODn7fB0RDN8J",
+                "name": "Mohammed Rafi"
+              },
+              {
+                "id": "0GF4shudTAFv8ak9eWdd4Y",
+                "name": "Kishore Kumar"
+              },
+              {
+                "id": "5as8A4G47Ohu9NSWs3Je8U",
+                "name": "Asha Bhosle"
+              },
+              {
+                "id": "3R2OMv8JpXLy6ZIW7Qxz59",
+                "name": "Usha Mangeshkar"
+              },
+              {
+                "id": "2JSYASbWU5Y0fVpts3Eq7g",
+                "name": "R. D. Burman"
+              }
+            ],
+            "album": {
+              "id": "7gvT1psTdUXs1WtgZmyBDe",
+              "name": "Shaan (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 53,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3mLhme6vdUX2wTgv7cVUtb"
+            },
+            "duration_ms": 426506,
+            "preview_url": null
+          },
+          {
+            "id": "6n0NFA0iMllFoM2cNCxQcy",
+            "name": "Dillagi Ne Di Hawa - From \"Dostana\"",
+            "artists": [
+              {
+                "id": "0GF4shudTAFv8ak9eWdd4Y",
+                "name": "Kishore Kumar"
+              },
+              {
+                "id": "5as8A4G47Ohu9NSWs3Je8U",
+                "name": "Asha Bhosle"
+              }
+            ],
+            "album": {
+              "id": "0c6CGUUkQAL7ZZTUK2WVj3",
+              "name": "Dostana (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 48,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6n0NFA0iMllFoM2cNCxQcy"
+            },
+            "duration_ms": 354533,
+            "preview_url": null
+          },
+          {
+            "id": "54R9VtxNwxqVTX1rQAmQt9",
+            "name": "Kya Dekhte Ho - From \"Qurbani\"",
+            "artists": [
+              {
+                "id": "5as8A4G47Ohu9NSWs3Je8U",
+                "name": "Asha Bhosle"
+              },
+              {
+                "id": "0gXDpqwYNDODn7fB0RDN8J",
+                "name": "Mohammed Rafi"
+              }
+            ],
+            "album": {
+              "id": "5XUhA9v9BBihWJBwTq2ZKs",
+              "name": "Qurbani (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 44,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/54R9VtxNwxqVTX1rQAmQt9"
+            },
+            "duration_ms": 277933,
+            "preview_url": null
+          },
+          {
+            "id": "5x0e6FT9SODps1GBO87ord",
+            "name": "Salamat Rahe Dostana Hamara (Part I) - From \"Dostana\"",
+            "artists": [
+              {
+                "id": "0gXDpqwYNDODn7fB0RDN8J",
+                "name": "Mohammed Rafi"
+              },
+              {
+                "id": "0GF4shudTAFv8ak9eWdd4Y",
+                "name": "Kishore Kumar"
+              }
+            ],
+            "album": {
+              "id": "0c6CGUUkQAL7ZZTUK2WVj3",
+              "name": "Dostana (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 43,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5x0e6FT9SODps1GBO87ord"
+            },
+            "duration_ms": 263093,
+            "preview_url": null
+          },
+          {
+            "id": "0XPSzRRQw8KZZiRZE7jlYf",
+            "name": "Yamma Yamma - From \"Shaan\"",
+            "artists": [
+              {
+                "id": "0gXDpqwYNDODn7fB0RDN8J",
+                "name": "Mohammed Rafi"
+              },
+              {
+                "id": "2JSYASbWU5Y0fVpts3Eq7g",
+                "name": "R. D. Burman"
+              }
+            ],
+            "album": {
+              "id": "7gvT1psTdUXs1WtgZmyBDe",
+              "name": "Shaan (Original Motion Picture Soundtrack)",
+              "release_date": "1980-01-01"
+            },
+            "popularity": 40,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0XPSzRRQw8KZZiRZE7jlYf"
+            },
+            "duration_ms": 341520,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "offset": 0,
+        "next_offset": 10,
+        "fetched_at": "2025-08-18T01:37:42.998478"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year-range/2018-2022?query=bollywood&limit=15",
+      "description": "Bollywood tracks from 2018-2022",
+      "status": "success",
+      "tracks_found": 14,
+      "total_available": 101,
+      "data": {
+        "year_range": "2018-2022",
+        "query": "bollywood",
+        "total": 101,
+        "tracks": [
+          {
+            "id": "2Fv2injs4qAm8mJBGaxVKU",
+            "name": "Tujhe Kitna Chahne Lage (From \"Kabir Singh\")",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "09UmIX92EUH9hAK4bxvHx6",
+                "name": "Mithoon"
+              }
+            ],
+            "album": {
+              "id": "3I8PdIhk6pNm8Kv0HiF14V",
+              "name": "Tujhe Kitna Chahne Lage (From \"Kabir Singh\")",
+              "release_date": "2019-05-31"
+            },
+            "popularity": 79,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2Fv2injs4qAm8mJBGaxVKU"
+            },
+            "duration_ms": 284779,
+            "preview_url": null
+          },
+          {
+            "id": "72zHuDxFQTjbL51qJQSA7j",
+            "name": "Ranjha (From \"Shershaah\")",
+            "artists": [
+              {
+                "id": "74OaRjmyh0XyRZsQQQ5l7c",
+                "name": "Jasleen Royal"
+              },
+              {
+                "id": "56SjZARoEvag3RoKWIb16j",
+                "name": "B Praak"
+              },
+              {
+                "id": "0bRPtPZQkWHeG7MGk9eWlh",
+                "name": "Romy"
+              }
+            ],
+            "album": {
+              "id": "0Z1zYMwJRpvq0d9rdqTOYo",
+              "name": "Ranjha (From \"Shershaah\")",
+              "release_date": "2021-08-05"
+            },
+            "popularity": 77,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/72zHuDxFQTjbL51qJQSA7j"
+            },
+            "duration_ms": 228855,
+            "preview_url": null
+          },
+          {
+            "id": "2PvaburAUlhNHxVhw5lvOq",
+            "name": "Humdard (From \"Ek Villain\")",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "1WwkojG9sjMSrFVz4D51W0",
+              "name": "Ultimate Love Songs - Arijit Singh",
+              "release_date": "2020-05-19"
+            },
+            "popularity": 77,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2PvaburAUlhNHxVhw5lvOq"
+            },
+            "duration_ms": 260590,
+            "preview_url": null
+          },
+          {
+            "id": "1hA697u7e1jX2XM8sWA6Uy",
+            "name": "Apna Bana Le",
+            "artists": [
+              {
+                "id": "1mBydYMVBECdDmMfE2sEUO",
+                "name": "Sachin-Jigar"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "2fMqTqiTxUDlmcOEPaQSsx",
+                "name": "Amitabh Bhattacharya"
+              }
+            ],
+            "album": {
+              "id": "1pw0xzpe4O0OMohBwau50L",
+              "name": "Bhediya (Original Motion Picture Soundtrack)",
+              "release_date": "2022-12-06"
+            },
+            "popularity": 77,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1hA697u7e1jX2XM8sWA6Uy"
+            },
+            "duration_ms": 261702,
+            "preview_url": null
+          },
+          {
+            "id": "6fScgF2Y63ScU73nYju0ny",
+            "name": "O Saathi",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              },
+              {
+                "id": "6jf2eKjiPT6P18RbOSLzf0",
+                "name": "Arko"
+              }
+            ],
+            "album": {
+              "id": "23L9JSXD0RrynRb71ZfL9A",
+              "name": "O Saathi (From \"Baaghi 2\")",
+              "release_date": "2018-03-09"
+            },
+            "popularity": 76,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6fScgF2Y63ScU73nYju0ny"
+            },
+            "duration_ms": 251818,
+            "preview_url": null
+          },
+          {
+            "id": "5bQ6oDLqvw8tywmnSmwEyL",
+            "name": "Apna Bana Le",
+            "artists": [
+              {
+                "id": "1mBydYMVBECdDmMfE2sEUO",
+                "name": "Sachin-Jigar"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "2fMqTqiTxUDlmcOEPaQSsx",
+                "name": "Amitabh Bhattacharya"
+              }
+            ],
+            "album": {
+              "id": "12sC6UjMWz6EaxnzyfCNMe",
+              "name": "Bhediya (Original Motion Picture Soundtrack)",
+              "release_date": "2022-11-22"
+            },
+            "popularity": 76,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5bQ6oDLqvw8tywmnSmwEyL"
+            },
+            "duration_ms": 261702,
+            "preview_url": null
+          },
+          {
+            "id": "2TYxwTH2HhL6OLVkZlsDLV",
+            "name": "Jugraafiya - From \"Super 30\"",
+            "artists": [
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              }
+            ],
+            "album": {
+              "id": "3D4OuBfCaBO8FnY5RiZVIj",
+              "name": "Jugraafiya (From \"Super 30\")",
+              "release_date": "2019-06-15"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2TYxwTH2HhL6OLVkZlsDLV"
+            },
+            "duration_ms": 274352,
+            "preview_url": null
+          },
+          {
+            "id": "0FBQ4NrrHUbR9kus7rzrOj",
+            "name": "Dil Diyan Gallan",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              }
+            ],
+            "album": {
+              "id": "1ujIERX0vWqw9kcYr6VMRp",
+              "name": "YRF Top 10 - Falling in Love",
+              "release_date": "2021-02-13"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0FBQ4NrrHUbR9kus7rzrOj"
+            },
+            "duration_ms": 260536,
+            "preview_url": null
+          },
+          {
+            "id": "1smFN2CLqGROu0J0UyvDfL",
+            "name": "Shayad",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "6IXfWhC7omotM4lt0ROmEr",
+              "name": "Love Aaj Kal (Original Motion Picture Soundtrack)",
+              "release_date": "2020-02-14"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1smFN2CLqGROu0J0UyvDfL"
+            },
+            "duration_ms": 247941,
+            "preview_url": null
+          },
+          {
+            "id": "0CtZpaOhtzvLV3FfcsVpQo",
+            "name": "Besharam Rang (From \"Pathaan\")",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "19LIHDDSHBD5NyYHI3gpzB",
+                "name": "Shilpa Rao"
+              },
+              {
+                "id": "2Yf4MRVpt0rcAd5y5h5ph1",
+                "name": "Caralisa Monteiro"
+              },
+              {
+                "id": "6CXEwIaXYfVJ84biCxqc9k",
+                "name": "Vishal Dadlani"
+              },
+              {
+                "id": "4xd7mLI7urqrxELaXhAvzw",
+                "name": "Shekhar Ravjiani"
+              },
+              {
+                "id": "0m3D4grap8VFSzbJMqgNVk",
+                "name": "Kumaar"
+              }
+            ],
+            "album": {
+              "id": "5CvI5ppsG522pV554VLezD",
+              "name": "Besharam Rang (From \"Pathaan\")",
+              "release_date": "2022-12-12"
+            },
+            "popularity": 69,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0CtZpaOhtzvLV3FfcsVpQo"
+            },
+            "duration_ms": 258472,
+            "preview_url": null
+          },
+          {
+            "id": "1YMLgvsQdE27r30q0fsLeV",
+            "name": "Tera Fitoor",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "0sSxphmGskGCKlwB9xa6WU",
+                "name": "Himesh Reshammiya"
+              },
+              {
+                "id": "0m3D4grap8VFSzbJMqgNVk",
+                "name": "Kumaar"
+              }
+            ],
+            "album": {
+              "id": "3RtFFza4brQXoNSv19g1ps",
+              "name": "Genius (Original Motion Picture Soundtrack)",
+              "release_date": "2018-08-24"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1YMLgvsQdE27r30q0fsLeV"
+            },
+            "duration_ms": 310000,
+            "preview_url": null
+          },
+          {
+            "id": "73K33p4Vyz9koXGqmL5eFs",
+            "name": "Malang Sajna",
+            "artists": [
+              {
+                "id": "6WOdPJmexxFINcKMkP2jMG",
+                "name": "Sachet Tandon"
+              },
+              {
+                "id": "1E6arsXf5Fgsnv9YpSzjpE",
+                "name": "Parampara Tandon"
+              },
+              {
+                "id": "0m3D4grap8VFSzbJMqgNVk",
+                "name": "Kumaar"
+              },
+              {
+                "id": "1SyKki7JI1AZNKwgNMkn25",
+                "name": "Sachet-Parampara"
+              }
+            ],
+            "album": {
+              "id": "7khRLZe8P6XcUoRgOa3nnf",
+              "name": "Malang Sajna",
+              "release_date": "2022-12-19"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/73K33p4Vyz9koXGqmL5eFs"
+            },
+            "duration_ms": 161041,
+            "preview_url": null
+          },
+          {
+            "id": "5sUSbJo0brScvv48ZZ1HrQ",
+            "name": "O Meri Laila",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              },
+              {
+                "id": "5wQDQFm7Ku8WWGi5xqJ9lp",
+                "name": "Jyotica Tangri"
+              }
+            ],
+            "album": {
+              "id": "1RNEvKlb3YovuiE8Gw5VOO",
+              "name": "Laila Majnu (Original Motion Picture Soundtrack)",
+              "release_date": "2018-10-30"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5sUSbJo0brScvv48ZZ1HrQ"
+            },
+            "duration_ms": 281856,
+            "preview_url": null
+          },
+          {
+            "id": "1ccZZf0IQi5y0bHMl2aGDF",
+            "name": "Gulabi Aankhen",
+            "artists": [
+              {
+                "id": "7o7doCwqft91WC690aglWC",
+                "name": "Sanam"
+              }
+            ],
+            "album": {
+              "id": "0xPcW40GWPqYki4y2Vi2pL",
+              "name": "Universally SANAM",
+              "release_date": "2019-08-09"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1ccZZf0IQi5y0bHMl2aGDF"
+            },
+            "duration_ms": 197759,
+            "preview_url": null
+          }
+        ],
+        "limit": 15,
+        "offset": 0,
+        "next_offset": null,
+        "fetched_at": "2025-08-18T01:37:43.267101"
+      }
+    },
+    {
+      "endpoint": "/search/tracks/year-range/2010-2015?query=hindi&limit=15",
+      "description": "Hindi tracks from 2010-2015",
+      "status": "success",
+      "tracks_found": 15,
+      "total_available": 100,
+      "data": {
+        "year_range": "2010-2015",
+        "query": "hindi",
+        "total": 100,
+        "tracks": [
+          {
+            "id": "3yV2c3cYhkAwSsxAq6nRiv",
+            "name": "Mann Mera",
+            "artists": [
+              {
+                "id": "1yzgJmZf5CxtFfGfRFm4Si",
+                "name": "Gajendra Verma"
+              }
+            ],
+            "album": {
+              "id": "7Gws1vUsWltRs58x8QuYVQ",
+              "name": "Table No. 21 (Original Motion Picture Soundtrack)",
+              "release_date": "2012-12-21"
+            },
+            "popularity": 80,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3yV2c3cYhkAwSsxAq6nRiv"
+            },
+            "duration_ms": 200120,
+            "preview_url": null
+          },
+          {
+            "id": "1fkjRQA8wXPPyxqYLbxuqy",
+            "name": "Ishq Bulaava",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "5kiKQJrz4BT7vFWVECAmHH",
+                "name": "Sanam Puri"
+              },
+              {
+                "id": "7gOZcXPfLtLbFgUyHGV7cZ",
+                "name": "Shipra Goyal"
+              }
+            ],
+            "album": {
+              "id": "3PxXJhlxSQkj8JO7IXy0FE",
+              "name": "Hasee Toh Phasee (Original Motion Picture Soundtrack)",
+              "release_date": "2014-01-05"
+            },
+            "popularity": 76,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1fkjRQA8wXPPyxqYLbxuqy"
+            },
+            "duration_ms": 303640,
+            "preview_url": null
+          },
+          {
+            "id": "3t3wsY5IdLVzB9WidegJSU",
+            "name": "Jeene Laga Hoon",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "1mBydYMVBECdDmMfE2sEUO",
+                "name": "Sachin-Jigar"
+              }
+            ],
+            "album": {
+              "id": "1VgXTSQsIrRn150j5MJrxR",
+              "name": "Ramaiya Vastavaiya (Original Motion Picture Soundtrack)",
+              "release_date": "2013-07-19"
+            },
+            "popularity": 77,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3t3wsY5IdLVzB9WidegJSU"
+            },
+            "duration_ms": 236933,
+            "preview_url": null
+          },
+          {
+            "id": "5OMUXgfXsSukZ0zxelpC3b",
+            "name": "Raanjhanaa (From \"Raanjhanaa\")",
+            "artists": [
+              {
+                "id": "1mYsTxnqsietFxj1OgoGbG",
+                "name": "A.R. Rahman"
+              },
+              {
+                "id": "2IP4wcE4hRbDi1zdV8Si6g",
+                "name": "Jaswinder Singh"
+              },
+              {
+                "id": "7DcUua74PM7MmBljTTjIyy",
+                "name": "Shiraz Uppal"
+              }
+            ],
+            "album": {
+              "id": "24C47633GRlozws7WBth7t",
+              "name": "Raanjhanaa (Original Motion Picture Soundtrack)",
+              "release_date": "2013-05-31"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5OMUXgfXsSukZ0zxelpC3b"
+            },
+            "duration_ms": 254653,
+            "preview_url": null
+          },
+          {
+            "id": "3xF15SqY32Mno3UUMBirhU",
+            "name": "Zehnaseeb",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "5UJ2sHO2ELrgW6aXeRLTQQ",
+                "name": "Chinmayi"
+              },
+              {
+                "id": "4xd7mLI7urqrxELaXhAvzw",
+                "name": "Shekhar Ravjiani"
+              }
+            ],
+            "album": {
+              "id": "3PxXJhlxSQkj8JO7IXy0FE",
+              "name": "Hasee Toh Phasee (Original Motion Picture Soundtrack)",
+              "release_date": "2014-01-05"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3xF15SqY32Mno3UUMBirhU"
+            },
+            "duration_ms": 217440,
+            "preview_url": null
+          },
+          {
+            "id": "5JCDVLwteSXuwVqjCa7SwH",
+            "name": "O Rangrez",
+            "artists": [
+              {
+                "id": "0L5GV6LN8SWWUWIdBbTLTZ",
+                "name": "Shankar-Ehsaan-Loy"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "5diMmmNkRVfgUnXJrzXzjZ",
+                "name": "Javed Bashir"
+              },
+              {
+                "id": "5XWfOrZhMMjoBTKcAgtFxe",
+                "name": "Yusuf Mohammed"
+              },
+              {
+                "id": "3cXNzZYIOUpv22w4iJm42t",
+                "name": "Vajid Ali"
+              }
+            ],
+            "album": {
+              "id": "3m5FIubiCHr9mH3BU7ngY4",
+              "name": "Bhaag Milkha Bhaag (Original Motion Picture Soundtrack)",
+              "release_date": "2013-06-14"
+            },
+            "popularity": 74,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5JCDVLwteSXuwVqjCa7SwH"
+            },
+            "duration_ms": 385000,
+            "preview_url": null
+          },
+          {
+            "id": "4kaLkst9lT3sQ5Crgxs3ic",
+            "name": "Pani Da Rang - Male Vocals",
+            "artists": [
+              {
+                "id": "7qHsapL39aTQsPhixtzVvy",
+                "name": "Ayushmann Khurrana"
+              },
+              {
+                "id": "3dN9MQpjIyNxyeRfz4EDZe",
+                "name": "Rochak Kohli"
+              }
+            ],
+            "album": {
+              "id": "71DVhsBjMZWwTk18SeQhip",
+              "name": "Vicky Donor (Original Motion Picture Soundtrack)",
+              "release_date": "2012-04-09"
+            },
+            "popularity": 73,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4kaLkst9lT3sQ5Crgxs3ic"
+            },
+            "duration_ms": 240786,
+            "preview_url": null
+          },
+          {
+            "id": "3beYHVCFKzbdNjJqjKeYpM",
+            "name": "Teri Jhuki Nazar",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "5SuRAj1A9FEHj5NxS86YAm",
+                "name": "Shafqat Amanat Ali"
+              }
+            ],
+            "album": {
+              "id": "59mJQyT1wOf5irSqfJNI43",
+              "name": "Murder 3 (Original Motion Picture Soundtrack)",
+              "release_date": "2013-02-01"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3beYHVCFKzbdNjJqjKeYpM"
+            },
+            "duration_ms": 279186,
+            "preview_url": null
+          },
+          {
+            "id": "1hQia6rxgfM1ly2hE3StWp",
+            "name": "Ishq Wala Love",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "4xd7mLI7urqrxELaXhAvzw",
+                "name": "Shekhar Ravjiani"
+              },
+              {
+                "id": "1TbRSunWGZ46mqnapcWxrm",
+                "name": "Salim Merchant"
+              },
+              {
+                "id": "3ZxZ03fj3tXBZHZWzvaLSM",
+                "name": "Neeti Mohan"
+              }
+            ],
+            "album": {
+              "id": "1Q9pYTcpVfz0eJTZZczELy",
+              "name": "Student of the Year (Original Motion Picture Soundtrack)",
+              "release_date": "2012-08-31"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1hQia6rxgfM1ly2hE3StWp"
+            },
+            "duration_ms": 257972,
+            "preview_url": null
+          },
+          {
+            "id": "3bZPdEskcnMdepwCaDSJRl",
+            "name": "Bin Tere",
+            "artists": [
+              {
+                "id": "6Mv8GjQa7LKUGCAqa9qqdb",
+                "name": "Vishal-Shekhar"
+              },
+              {
+                "id": "5SuRAj1A9FEHj5NxS86YAm",
+                "name": "Shafqat Amanat Ali"
+              },
+              {
+                "id": "3eDT9fwXKuHWFvgZaaYC5v",
+                "name": "Sunidhi Chauhan"
+              }
+            ],
+            "album": {
+              "id": "4SPHfSWibeoFCSdR4vd5QL",
+              "name": "I Hate Luv Storys (Original Motion Picture Soundtrack)",
+              "release_date": "2010-05-25"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3bZPdEskcnMdepwCaDSJRl"
+            },
+            "duration_ms": 330360,
+            "preview_url": null
+          },
+          {
+            "id": "5pPyvA03RKSJrAnnDcq0nh",
+            "name": "Saibo",
+            "artists": [
+              {
+                "id": "1mBydYMVBECdDmMfE2sEUO",
+                "name": "Sachin-Jigar"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "6k6dimE4a6OFnD0HWmkIUW",
+                "name": "Tochi Raina"
+              }
+            ],
+            "album": {
+              "id": "7J7qILtFBTj1oTzPXNii6Y",
+              "name": "Shor in the City (Original Motion Picture Soundtrack [Deluxe Edition])",
+              "release_date": "2011"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5pPyvA03RKSJrAnnDcq0nh"
+            },
+            "duration_ms": 195515,
+            "preview_url": null
+          },
+          {
+            "id": "5a11x5PUFvJEadMRqtNtTr",
+            "name": "Piya O Re Piya",
+            "artists": [
+              {
+                "id": "2oSONSC9zQ4UonDKnLqksx",
+                "name": "Atif Aslam"
+              },
+              {
+                "id": "0oOet2f43PA68X5RxKobEy",
+                "name": "Shreya Ghoshal"
+              },
+              {
+                "id": "1mBydYMVBECdDmMfE2sEUO",
+                "name": "Sachin-Jigar"
+              }
+            ],
+            "album": {
+              "id": "0OhM0xKiFdqKakSWYx0hs4",
+              "name": "Tere Naal Love Ho Gaya (Original Motion Picture Soundtrack)",
+              "release_date": "2011-02-24"
+            },
+            "popularity": 72,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/5a11x5PUFvJEadMRqtNtTr"
+            },
+            "duration_ms": 292746,
+            "preview_url": null
+          },
+          {
+            "id": "6zCQF5tu7HVwU9shhKqiuF",
+            "name": "Khamoshiyan",
+            "artists": [
+              {
+                "id": "2kkQthS9OLpK4UqNWYqoVl",
+                "name": "Jeet Gannguli"
+              },
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "5r2baeTwcCJnuIsDIlxUJo",
+                "name": "Rashmi Virag"
+              }
+            ],
+            "album": {
+              "id": "6mJIpY6r2SzZbLN3ClYCbb",
+              "name": "Khamoshiyan (Original Motion Picture Soundtrack)",
+              "release_date": "2014-12-29"
+            },
+            "popularity": 71,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/6zCQF5tu7HVwU9shhKqiuF"
+            },
+            "duration_ms": 335709,
+            "preview_url": null
+          },
+          {
+            "id": "7H3mfOvtPNA8YDF3EdKy0L",
+            "name": "Tum Hi Ho Bandhu",
+            "artists": [
+              {
+                "id": "1wRPtKGflJrBx9BmLsSwlU",
+                "name": "Pritam"
+              },
+              {
+                "id": "3tHD07u1ON4uHxmnT9rwqZ",
+                "name": "Neeraj Shridhar"
+              },
+              {
+                "id": "3nQ125TJobosBH446Dsvvv",
+                "name": "Kavita Seth"
+              },
+              {
+                "id": "3GdSQUH1BRtl9UrrtuwJlP",
+                "name": "Irshad Kamil"
+              }
+            ],
+            "album": {
+              "id": "1y5h6GBXEgFjBDHThikj1w",
+              "name": "Cocktail (Original Motion Picture Soundtrack)",
+              "release_date": "2012-06-15"
+            },
+            "popularity": 71,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/7H3mfOvtPNA8YDF3EdKy0L"
+            },
+            "duration_ms": 283693,
+            "preview_url": null
+          },
+          {
+            "id": "32765xcLM1fd6wQIpkN9A0",
+            "name": "Hasi - Male Version",
+            "artists": [
+              {
+                "id": "5ugsiK49gIkIVh8U93EO0z",
+                "name": "Ami Mishra"
+              },
+              {
+                "id": "52XgeWw24o4klNdfwvB0Vx",
+                "name": "Kunaal Vermaa"
+              }
+            ],
+            "album": {
+              "id": "7sVzilmsqYcLMYw2gtvoZM",
+              "name": "Hamari Adhuri Kahani (Original Motion Picture Soundtrack)",
+              "release_date": "2015-05-21"
+            },
+            "popularity": 75,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/32765xcLM1fd6wQIpkN9A0"
+            },
+            "duration_ms": 272668,
+            "preview_url": null
+          }
+        ],
+        "limit": 15,
+        "offset": 0,
+        "next_offset": 15,
+        "fetched_at": "2025-08-18T01:37:43.561494"
+      }
+    },
+    {
+      "endpoint": "/search/top-of-year/2020?limit=10",
+      "description": "Top tracks of 2020",
+      "status": "success",
+      "tracks_found": 1,
+      "total_available": 0,
+      "data": {
+        "year": 2020,
+        "genre": "all",
+        "total_found": 1,
+        "tracks": [
+          {
+            "id": "3JWdddiYo44FHjT8NdToGU",
+            "name": "Jaane Na Dunga Kahin - From \"Never Kiss Your Best Friend\"",
+            "artists": [
+              {
+                "id": "4RlnRVxKm3jnUzOP4czbIK",
+                "name": "Yash Narvekar"
+              },
+              {
+                "id": "4IKVDbCSBTxBeAsMKjAuTs",
+                "name": "Armaan Malik"
+              }
+            ],
+            "album": {
+              "id": "6RTDlG3LUTKKg3GqmTPPQb",
+              "name": "Jaane Na Dunga Kahin (From \"Never Kiss Your Best Friend\" / Original Motion Picture Soundtrack)",
+              "release_date": "2020-01-14"
+            },
+            "popularity": 33,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3JWdddiYo44FHjT8NdToGU"
+            },
+            "duration_ms": 191612,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "fetched_at": "2025-08-18T01:37:44.415058",
+        "note": "Top tracks from 2020 based on Spotify popularity scores"
+      }
+    },
+    {
+      "endpoint": "/search/top-of-year/2019?genre=bollywood&limit=10",
+      "description": "Top Bollywood tracks of 2019",
+      "status": "success",
+      "tracks_found": 10,
+      "total_available": 0,
+      "data": {
+        "year": 2019,
+        "genre": "bollywood",
+        "total_found": 58,
+        "tracks": [
+          {
+            "id": "7aE1lfskJLMHQnzCCP1zsV",
+            "name": "Humsafar (From \"Badrinath Ki Dulhania\")",
+            "artists": [
+              {
+                "id": "3TOhzLRYnkkul71yRBxIoM",
+                "name": "Akhil Sachdeva"
+              },
+              {
+                "id": "7zfceKY7I04Tc0J2o7043h",
+                "name": "Mansheel Gujral"
+              }
+            ],
+            "album": {
+              "id": "1kjmB9cfxSjPJFfqwZ9eHN",
+              "name": "Best Of Akhil Sachdeva",
+              "release_date": "2019-09-03"
+            },
+            "popularity": 70,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/7aE1lfskJLMHQnzCCP1zsV"
+            },
+            "duration_ms": 268463,
+            "preview_url": null
+          },
+          {
+            "id": "0NnaDlYvjuE6lpnGynSxTm",
+            "name": "Chhod Diya",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "0XGCL8zBp3Ncw7bqmzyzu9",
+              "name": "Bollywood Hits Top 10",
+              "release_date": "2019-11-08"
+            },
+            "popularity": 51,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/0NnaDlYvjuE6lpnGynSxTm"
+            },
+            "duration_ms": 319550,
+            "preview_url": null
+          },
+          {
+            "id": "2EKXTA9QxkW6XeQ2uEeIii",
+            "name": "Nashe Si Chadh Gayi",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "2Yf4MRVpt0rcAd5y5h5ph1",
+                "name": "Caralisa Monteiro"
+              }
+            ],
+            "album": {
+              "id": "3AR0fKVboFiOJeKjnSSdwT",
+              "name": "Best of Arijit Singh",
+              "release_date": "2019-07-15"
+            },
+            "popularity": 47,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/2EKXTA9QxkW6XeQ2uEeIii"
+            },
+            "duration_ms": 238288,
+            "preview_url": null
+          },
+          {
+            "id": "4cLDbXvPQdtlclviX5zloz",
+            "name": "Sajde",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              },
+              {
+                "id": "4cSJs8KQW0qPqIEOyXsWix",
+                "name": "Nihira Joshi Deshpande"
+              },
+              {
+                "id": "0yRC5n90spXG0d3aiDQ0vB",
+                "name": "Gulzar"
+              }
+            ],
+            "album": {
+              "id": "3AR0fKVboFiOJeKjnSSdwT",
+              "name": "Best of Arijit Singh",
+              "release_date": "2019-07-15"
+            },
+            "popularity": 39,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4cLDbXvPQdtlclviX5zloz"
+            },
+            "duration_ms": 325459,
+            "preview_url": null
+          },
+          {
+            "id": "39rkDTDZHXpB6h7vhLclR6",
+            "name": "Jiya",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "3AR0fKVboFiOJeKjnSSdwT",
+              "name": "Best of Arijit Singh",
+              "release_date": "2019-07-15"
+            },
+            "popularity": 27,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/39rkDTDZHXpB6h7vhLclR6"
+            },
+            "duration_ms": 283742,
+            "preview_url": null
+          },
+          {
+            "id": "3M866Kex0hAjLG4o7Lqdra",
+            "name": "Kaari Kaari",
+            "artists": [
+              {
+                "id": "5r3gdJkUB4oAcnuIGXEB7q",
+                "name": "Quratulain Balouch"
+              }
+            ],
+            "album": {
+              "id": "0XGCL8zBp3Ncw7bqmzyzu9",
+              "name": "Bollywood Hits Top 10",
+              "release_date": "2019-11-08"
+            },
+            "popularity": 24,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/3M866Kex0hAjLG4o7Lqdra"
+            },
+            "duration_ms": 387096,
+            "preview_url": null
+          },
+          {
+            "id": "1yuvLpLxjjTzNy28Wa63Uf",
+            "name": "La La La",
+            "artists": [
+              {
+                "id": "5f4QpKfy7ptCHwTqspnSJI",
+                "name": "Neha Kakkar"
+              },
+              {
+                "id": "7hHDO4bJGlEaEHlY2lj1eZ",
+                "name": "Bilal Saeed"
+              }
+            ],
+            "album": {
+              "id": "0XGCL8zBp3Ncw7bqmzyzu9",
+              "name": "Bollywood Hits Top 10",
+              "release_date": "2019-11-08"
+            },
+            "popularity": 23,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1yuvLpLxjjTzNy28Wa63Uf"
+            },
+            "duration_ms": 187200,
+            "preview_url": null
+          },
+          {
+            "id": "1g3vdRz5zSy2GYRO67vlJW",
+            "name": "A B C D E F G H I",
+            "artists": [
+              {
+                "id": "2NoJ7NuNs9nyj8Thoh1kbu",
+                "name": "Hariharan"
+              },
+              {
+                "id": "70B80Lwx2sxti0M1Ng9e8K",
+                "name": "Udit Narayan"
+              }
+            ],
+            "album": {
+              "id": "4ZzUxs4ap6MCHi4uMZmOvw",
+              "name": "Old Is Gold - Best of Bollywood",
+              "release_date": "2019-05-13"
+            },
+            "popularity": 18,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1g3vdRz5zSy2GYRO67vlJW"
+            },
+            "duration_ms": 275382,
+            "preview_url": null
+          },
+          {
+            "id": "1O4coSSXtT9e7Na8XGwVff",
+            "name": "Murshida",
+            "artists": [
+              {
+                "id": "4YRxDV8wJFPHPTeXepOstw",
+                "name": "Arijit Singh"
+              }
+            ],
+            "album": {
+              "id": "0XGCL8zBp3Ncw7bqmzyzu9",
+              "name": "Bollywood Hits Top 10",
+              "release_date": "2019-11-08"
+            },
+            "popularity": 16,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/1O4coSSXtT9e7Na8XGwVff"
+            },
+            "duration_ms": 325908,
+            "preview_url": null
+          },
+          {
+            "id": "641kLiEd5bvNBc6bq1bOus",
+            "name": "Moments of Love Best Bollywood Mashup",
+            "artists": [
+              {
+                "id": "4Z0t0LHjOjFRiv0mjBw206",
+                "name": "Aditya Narayan"
+              },
+              {
+                "id": "5qERXbPWPdUePjrAW00vuU",
+                "name": "Raj Barman"
+              },
+              {
+                "id": "2x3kv2QZziJPNlhOwwExzm",
+                "name": "Anwesshaa"
+              },
+              {
+                "id": "7dQ5fW3l7p8b2b7bbugNwZ",
+                "name": "Deepshikha"
+              },
+              {
+                "id": "4nrzV0KNK93wplq40UzfkW",
+                "name": "Mann Taneja"
+              },
+              {
+                "id": "01js67vCERR0Szd9DGvYdv",
+                "name": "Rukhsar"
+              },
+              {
+                "id": "77gMJTmGcryznkxG0q19Me",
+                "name": "Khwahish Gal"
+              },
+              {
+                "id": "3DYqdRwHGB8fjVO0JqAgN7",
+                "name": "Siddharth Slathia"
+              }
+            ],
+            "album": {
+              "id": "7vnvMNsbVFGx9RojWz78NN",
+              "name": "Moments of Love Best Bollywood Mashup",
+              "release_date": "2019-12-26"
+            },
+            "popularity": 16,
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/641kLiEd5bvNBc6bq1bOus"
+            },
+            "duration_ms": 280200,
+            "preview_url": null
+          }
+        ],
+        "limit": 10,
+        "fetched_at": "2025-08-18T01:37:45.413423",
+        "note": "Top tracks from 2019 based on Spotify popularity scores"
+      }
+    }
+  ]
+}
