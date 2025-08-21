@@ -280,15 +280,31 @@ sequenceDiagram
 
 ## Author
 
-**Vishesh Sanghvi**
+**Vishesh Sanghvi** - *Creator & Lead Developer*
 
 🌐 **Website:** [visheshsanghvi.me](https://www.visheshsanghvi.me/)  
 💼 **LinkedIn:** [vishesh-sanghvi](https://www.linkedin.com/in/vishesh-sanghvi-96b16a237/)  
 🐙 **GitHub:** [@visheshsanghvi112](https://github.com/visheshsanghvi112)
 
-Full-stack developer passionate about music analytics and data visualization. This project combines modern web technologies with real-time music data to create insightful analytics dashboards.
+**Visionary full-stack developer** and **music technology enthusiast** with a passion for transforming raw data into compelling insights. Vishesh architected this comprehensive music analytics platform from the ground up, seamlessly integrating cutting-edge technologies to deliver real-time music intelligence.
+
+### 🎯 **Technical Expertise Showcased:**
+- **Backend Mastery**: FastAPI + SQLAlchemy architecture with optimized database design
+- **Frontend Excellence**: React + TypeScript + Modern UI/UX with responsive design
+- **Data Engineering**: Real-time ingestion pipelines and analytics aggregation
+- **API Design**: RESTful endpoints with comprehensive documentation
+- **DevOps**: Docker containerization and production-ready deployment strategies
+
+### 🚀 **Project Highlights:**
+- **Real-time Data Processing**: Live Spotify Top 50 charts across multiple markets
+- **Advanced Analytics**: Cross-market comparisons and genre distribution insights  
+- **Scalable Architecture**: Modular design supporting future enhancements
+- **Performance Optimized**: Efficient querying and caching strategies
+- **Production Ready**: Complete with proper licensing, documentation, and testing
+
+*A testament to modern software engineering principles and innovative music data visualization.*
 
 ---
 
-*Built with ❤️ using FastAPI, React, TypeScript, and the Spotify Web API*
+*Crafted with passion, precision, and ❤️ using FastAPI, React, TypeScript, and the Spotify Web API*
 
