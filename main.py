@@ -6,20 +6,27 @@ This file helps Railway detect the project as a Python application
 
 import sys
 import os
-import subprocess
 
 def main():
     """Main entry point that starts the FastAPI application"""
     # Change to the backend directory
-    os.chdir('india-music-insights')
+    backend_path = os.path.join(os.path.dirname(__file__), 'india-music-insights')
+    os.chdir(backend_path)
     
-    # Start the FastAPI application
-    subprocess.run([
-        sys.executable, '-m', 'uvicorn', 
-        'app.main:app', 
-        '--host', '0.0.0.0', 
-        '--port', os.environ.get('PORT', '8000')
-    ])
+    # Add the backend directory to Python path
+    sys.path.insert(0, backend_path)
+    
+    # Get the port from environment variable
+    port = os.environ.get('PORT', '8000')
+    
+    # Import and run uvicorn programmatically
+    import uvicorn
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0",
+        port=int(port),
+        log_level="info"
+    )
 
 if __name__ == "__main__":
     main()
