@@ -1,1 +1,1 @@
-web: cd india-music-insights && python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+web: python main.py

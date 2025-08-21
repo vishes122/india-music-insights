@@ -1,0 +1,3 @@
+# Root requirements file for Railway deployment
+# This points Railway to the actual backend requirements
+-r india-music-insights/requirements.txt
