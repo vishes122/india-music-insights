@@ -15,6 +15,7 @@ This README is your single, authoritative reference. It explains the project hie
 - Diagrams (ERD + request flow)
 - Extend and maintain
 - Troubleshooting
+- Author
 
 ## High-level architecture
 - Backend (FastAPI + SQLAlchemy + SQLite)
@@ -276,4 +277,18 @@ sequenceDiagram
  - Uvicorn reload loop or exit code 1 on Windows: avoid inline `$env:VAR=...` chains; start with an `.env` file and a clean command.
  - Port already in use: change `--port` or terminate the existing process.
  - SQLite locked: stop the API, delete temporary `*.db-shm/*.db-wal` files, then restart.
+
+## Author
+
+**Vishesh Sanghvi**
+
+🌐 **Website:** [visheshsanghvi.me](https://www.visheshsanghvi.me/)  
+💼 **LinkedIn:** [vishesh-sanghvi](https://www.linkedin.com/in/vishesh-sanghvi-96b16a237/)  
+🐙 **GitHub:** [@visheshsanghvi112](https://github.com/visheshsanghvi112)
+
+Full-stack developer passionate about music analytics and data visualization. This project combines modern web technologies with real-time music data to create insightful analytics dashboards.
+
+---
+
+*Built with ❤️ using FastAPI, React, TypeScript, and the Spotify Web API*
 
