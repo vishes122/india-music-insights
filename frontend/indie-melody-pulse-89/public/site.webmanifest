@@ -1,0 +1,11 @@
+{
+  "name": "Music Insights",
+  "short_name": "Insights",
+  "icons": [
+    {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ],
+  "theme_color": "#1DB954",
+  "background_color": "#111315",
+  "display": "standalone",
+  "start_url": "/"
+}
