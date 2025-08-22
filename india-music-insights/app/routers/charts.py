@@ -18,6 +18,7 @@ from ..services.ingest import IngestionService
 from ..utils.time import today_in_timezone
 from ..utils.caching import cache
 from ..utils.logging import get_request_logger
+from ..config import settings
 
 router = APIRouter(prefix="/v1", tags=["charts"])
 
@@ -897,3 +898,113 @@ async def get_top_artists(
         logger = get_request_logger()
         logger.error("Error getting top artists", year=year, error=str(e))
         raise HTTPException(status_code=500, detail=f"Failed to get top artists: {str(e)}")
+
+
+@router.post("/admin/sample-data/init", response_model=dict)
+async def init_sample_data(
+    admin_key: str = Depends(verify_admin_key),
+    db: Session = Depends(get_database)
+):
+    """
+    Initialize database with sample data for testing
+    """
+    logger = get_request_logger()
+    
+    try:
+        # Sample artists
+        sample_artists = [
+            {"spotify_id": "artist1", "name": "Arijit Singh", "popularity": 95, "followers": 15000000},
+            {"spotify_id": "artist2", "name": "Shreya Ghoshal", "popularity": 92, "followers": 8000000},
+            {"spotify_id": "artist3", "name": "Vishal-Shekhar", "popularity": 88, "followers": 5000000},
+            {"spotify_id": "artist4", "name": "Sachin-Jigar", "popularity": 85, "followers": 3000000}
+        ]
+        
+        # Sample tracks
+        sample_tracks = [
+            {
+                "spotify_id": "track1", "name": "Kesariya", "album": "Brahmastra",
+                "album_release_date": "2022-08-01", "popularity": 95, "explicit": False, "duration_ms": 240000
+            },
+            {
+                "spotify_id": "track2", "name": "Apna Bana Le", "album": "Bhediya",
+                "album_release_date": "2022-11-15", "popularity": 88, "explicit": False, "duration_ms": 220000
+            },
+            {
+                "spotify_id": "track3", "name": "Tum Kya Mile", "album": "Rocky Aur Rani Kii Prem Kahaani",
+                "album_release_date": "2023-07-10", "popularity": 92, "explicit": False, "duration_ms": 280000
+            },
+            {
+                "spotify_id": "track4", "name": "Ve Kamleya", "album": "Rocky Aur Rani Kii Prem Kahaani",
+                "album_release_date": "2023-07-15", "popularity": 85, "explicit": False, "duration_ms": 260000
+            }
+        ]
+        
+        # Clear existing data
+        db.query(PlaylistTrackSnapshot).delete()
+        db.query(Playlist).delete()
+        db.query(Track).delete()
+        db.query(Artist).delete()
+        
+        # Add artists
+        for artist_data in sample_artists:
+            artist = Artist(
+                spotify_id=artist_data["spotify_id"],
+                name=artist_data["name"],
+                popularity=artist_data["popularity"],
+                followers=artist_data["followers"]
+            )
+            db.add(artist)
+        
+        # Add tracks
+        for track_data in sample_tracks:
+            track = Track(
+                spotify_id=track_data["spotify_id"],
+                name=track_data["name"],
+                album=track_data["album"],
+                album_release_date=track_data["album_release_date"],
+                popularity=track_data["popularity"],
+                explicit=track_data["explicit"],
+                duration_ms=track_data["duration_ms"]
+            )
+            db.add(track)
+        
+        # Add playlist
+        playlist = Playlist(
+            spotify_id="37i9dQZEVXbLZ52XmnySJg",
+            name="India Top 50",
+            market="IN"
+        )
+        db.add(playlist)
+        
+        db.flush()  # Get IDs without committing
+        
+        # Get the playlist and tracks to create snapshots
+        tracks = db.query(Track).all()
+        
+        # Add playlist snapshots
+        today = today_in_timezone(settings.timezone)
+        for i, track in enumerate(tracks):
+            snapshot = PlaylistTrackSnapshot(
+                playlist_id=playlist.id,
+                track_id=track.id,
+                snapshot_date=today,
+                rank=i + 1,
+                fetched_at=datetime.now()
+            )
+            db.add(snapshot)
+        
+        db.commit()
+        
+        logger.info("Sample data initialized successfully")
+        return {
+            "success": True,
+            "message": "Sample data initialized successfully",
+            "artists_added": len(sample_artists),
+            "tracks_added": len(sample_tracks),
+            "snapshots_created": len(tracks)
+        }
+        
+    except Exception as e:
+        db.rollback()
+        logger.error("Error initializing sample data", error=str(e))
+        raise HTTPException(status_code=500, detail=f"Failed to initialize sample data: {str(e)}")
