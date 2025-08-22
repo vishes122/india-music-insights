@@ -1,60 +1,14 @@
 {
   "version": 2,
-  "name": "india-music-insights-frontend",
-  "public": true,
-  "buildCommand": "npm install && npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "env": {
-    "VITE_API_BASE_URL": "https://web-production-ca268.up.railway.app"
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options", 
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
-      "source": "/((?!.*\\.).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "/health",
-      "destination": "/",
-      "permanent": false
-    }
-  ],
-  "trailingSlash": false,
-  "cleanUrls": true
+  "env": {
+    "VITE_API_BASE_URL": "https://web-production-ca268.up.railway.app"
+  }
 }
