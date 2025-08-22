@@ -425,19 +425,34 @@ async def search_tracks_by_year(
         tracks = []
         if results and "tracks" in results and results["tracks"]["items"]:
             for item in results["tracks"]["items"]:
+                # Extract album image (preferably 640x640, fallback to largest available)
+                album_images = item["album"].get("images", [])
+                album_image_url = None
+                album_image_width = None
+                album_image_height = None
+                
+                if album_images:
+                    # Sort by size (largest first) and take the best quality image
+                    sorted_images = sorted(album_images, key=lambda x: x.get('width', 0) * x.get('height', 0), reverse=True)
+                    best_image = sorted_images[0]
+                    album_image_url = best_image.get('url')
+                    album_image_width = best_image.get('width')
+                    album_image_height = best_image.get('height')
+                
                 track_data = {
-                    "id": item["id"],
-                    "name": item["name"],
-                    "artists": [{"id": artist["id"], "name": artist["name"]} for artist in item["artists"]],
-                    "album": {
-                        "id": item["album"]["id"],
-                        "name": item["album"]["name"],
-                        "release_date": item["album"]["release_date"]
-                    },
+                    "rank": len(tracks) + 1,
+                    "track_name": item["name"],
+                    "artists": [artist["name"] for artist in item["artists"]],
+                    "album": item["album"]["name"],
+                    "album_image_url": album_image_url,
+                    "album_image_width": album_image_width,
+                    "album_image_height": album_image_height,
+                    "release_date": item["album"]["release_date"],
                     "popularity": item["popularity"],
-                    "external_urls": item["external_urls"],
-                    "duration_ms": item.get("duration_ms"),
-                    "preview_url": item.get("preview_url")
+                    "spotify_url": item["external_urls"].get("spotify"),
+                    "preview_url": item.get("preview_url"),
+                    "duration_formatted": _format_duration(item.get("duration_ms")),
+                    "explicit": item.get("explicit", False)
                 }
                 tracks.append(track_data)
         
@@ -522,19 +537,34 @@ async def search_tracks_by_year_range(
         tracks = []
         if results and "tracks" in results and results["tracks"]["items"]:
             for item in results["tracks"]["items"]:
+                # Extract album image (preferably 640x640, fallback to largest available)
+                album_images = item["album"].get("images", [])
+                album_image_url = None
+                album_image_width = None
+                album_image_height = None
+                
+                if album_images:
+                    # Sort by size (largest first) and take the best quality image
+                    sorted_images = sorted(album_images, key=lambda x: x.get('width', 0) * x.get('height', 0), reverse=True)
+                    best_image = sorted_images[0]
+                    album_image_url = best_image.get('url')
+                    album_image_width = best_image.get('width')
+                    album_image_height = best_image.get('height')
+                
                 track_data = {
-                    "id": item["id"],
-                    "name": item["name"],
-                    "artists": [{"id": artist["id"], "name": artist["name"]} for artist in item["artists"]],
-                    "album": {
-                        "id": item["album"]["id"],
-                        "name": item["album"]["name"],
-                        "release_date": item["album"]["release_date"]
-                    },
+                    "rank": len(tracks) + 1,
+                    "track_name": item["name"],
+                    "artists": [artist["name"] for artist in item["artists"]],
+                    "album": item["album"]["name"],
+                    "album_image_url": album_image_url,
+                    "album_image_width": album_image_width,
+                    "album_image_height": album_image_height,
+                    "release_date": item["album"]["release_date"],
                     "popularity": item["popularity"],
-                    "external_urls": item["external_urls"],
-                    "duration_ms": item.get("duration_ms"),
-                    "preview_url": item.get("preview_url")
+                    "spotify_url": item["external_urls"].get("spotify"),
+                    "preview_url": item.get("preview_url"),
+                    "duration_formatted": _format_duration(item.get("duration_ms")),
+                    "explicit": item.get("explicit", False)
                 }
                 tracks.append(track_data)
         
