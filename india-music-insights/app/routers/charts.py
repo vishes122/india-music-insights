@@ -63,25 +63,32 @@ async def get_today_chart(
         
         # If no data exists or data is stale (not from today), trigger fresh ingestion
         # Also check if we have sample data (only 4-5 tracks) and force refresh
+        should_refresh = False
+        refresh_reason = ""
+        track_count = 0
+        
         if not latest_snapshot_date or latest_snapshot_date < today:
             should_refresh = True
-            refresh_reason = "stale_data"
+            refresh_reason = "stale_or_missing_data"
         else:
             # Check if we have very few tracks (likely sample data)
-            track_count = db.query(func.count(PlaylistTrackSnapshot.id))\
-                .join(Playlist)\
-                .filter(
-                    and_(
-                        Playlist.market == market,
-                        PlaylistTrackSnapshot.snapshot_date == latest_snapshot_date
-                    )
-                ).scalar()
-            
-            if track_count <= 5:  # Sample data detection
-                should_refresh = True
-                refresh_reason = "sample_data_detected"
-            else:
-                should_refresh = False
+            try:
+                track_count = db.query(func.count(PlaylistTrackSnapshot.id))\
+                    .join(Playlist)\
+                    .filter(
+                        and_(
+                            Playlist.market == market,
+                            PlaylistTrackSnapshot.snapshot_date == latest_snapshot_date
+                        )
+                    ).scalar()
+                
+                if track_count and track_count <= 5:  # Sample data detection
+                    should_refresh = True
+                    refresh_reason = "sample_data_detected"
+                    
+            except Exception as count_error:
+                logger.warning("Failed to count tracks, proceeding without refresh", error=str(count_error))
+                track_count = 0
         
         if should_refresh:
             logger.info(
@@ -90,16 +97,22 @@ async def get_today_chart(
                 reason=refresh_reason,
                 latest_date=latest_snapshot_date.isoformat() if latest_snapshot_date else None,
                 today=today.isoformat(),
-                existing_tracks=track_count if 'track_count' in locals() else 0
+                existing_tracks=track_count
             )
             
             try:
                 # Clear existing data for this market to prevent conflicts
-                db.query(PlaylistTrackSnapshot)\
-                    .join(Playlist)\
-                    .filter(Playlist.market == market)\
-                    .delete(synchronize_session=False)
-                db.commit()
+                if latest_snapshot_date:
+                    deleted_count = db.query(PlaylistTrackSnapshot)\
+                        .join(Playlist)\
+                        .filter(
+                            and_(
+                                Playlist.market == market,
+                                PlaylistTrackSnapshot.snapshot_date == latest_snapshot_date
+                            )
+                        ).delete(synchronize_session=False)
+                    db.commit()
+                    logger.info(f"Cleared {deleted_count} existing snapshots for fresh data")
                 
                 # Trigger fresh ingestion
                 ingest_service = IngestionService(db)
@@ -110,12 +123,13 @@ async def get_today_chart(
                 latest_snapshot_date = today
                 
             except Exception as ingest_error:
-                logger.warning(
-                    "Fresh ingestion failed, using existing data if available", 
+                logger.error(
+                    "Fresh ingestion failed, continuing with existing data", 
                     market=market, 
-                    error=str(ingest_error)
+                    error=str(ingest_error),
+                    error_type=type(ingest_error).__name__
                 )
-                # Continue with existing data if ingestion fails
+                # Don't raise the error, continue with existing data if available
         
         if not latest_snapshot_date:
             raise HTTPException(
