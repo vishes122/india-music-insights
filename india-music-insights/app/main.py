@@ -88,11 +88,27 @@ app = FastAPI(
 # Add middleware
 app.add_middleware(RequestContextMiddleware)
 
+# CORS Configuration - Use environment variable for origins
+allowed_origins = []
+if settings.is_development:
+    # Development: Allow common dev server ports
+    allowed_origins = [
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:8080",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:8080"
+    ]
+else:
+    # Production: Use configured CORS origins
+    allowed_origins = settings.cors_origins_list
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"] if settings.is_development else ["https://yourdomain.com"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 

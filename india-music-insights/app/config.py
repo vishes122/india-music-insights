@@ -65,6 +65,17 @@ class Settings(BaseSettings):
     snapshot_hour: int = Field(default=0)  # 00:30 IST
     snapshot_minute: int = Field(default=30)
     
+    # CORS Configuration
+    cors_origins: str = Field(
+        default="http://localhost:3000,http://localhost:5173,http://localhost:8080", 
+        alias="CORS_ORIGINS"
+    )
+    
+    @property
+    def cors_origins_list(self) -> List[str]:
+        """Parse CORS origins from comma-separated string"""
+        return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
+    
     class Config:
         env_file = ".env"
         case_sensitive = False

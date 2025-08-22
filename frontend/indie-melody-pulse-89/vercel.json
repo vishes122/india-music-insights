@@ -7,6 +7,9 @@
   "installCommand": "npm install",
   "outputDirectory": "dist",
   "framework": "vite",
+  "env": {
+    "VITE_API_BASE_URL": "https://web-production-ca268.up.railway.app"
+  },
   "headers": [
     {
       "source": "/(.*)",
