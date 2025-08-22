@@ -101,8 +101,10 @@ if settings.is_development:
         "http://127.0.0.1:8080"
     ]
 else:
-    # Production: Use configured CORS origins
-    allowed_origins = settings.cors_origins_list
+    # Production: Use configured CORS origins + Vercel domain
+    allowed_origins = settings.cors_origins_list + [
+        "https://india-music-insights.vercel.app"
+    ]
 
 app.add_middleware(
     CORSMiddleware,
