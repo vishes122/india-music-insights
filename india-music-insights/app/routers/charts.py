@@ -33,6 +33,7 @@ async def get_today_chart(
     Get today's top tracks chart for a market
     
     Returns the latest playlist snapshot from the database.
+    Automatically triggers fresh data ingestion if data is stale.
     Uses caching to reduce database load.
     """
     market = validate_market(market)
@@ -49,16 +50,47 @@ async def get_today_chart(
     logger.info("Fetching today chart from database", market=market, limit=limit)
     
     try:
+        # Get today's date for this market
+        from ..config import get_market_config
+        market_config = get_market_config(market)
+        today = today_in_timezone(market_config["timezone"])
+        
         # Get the most recent snapshot for this market
         latest_snapshot_date = db.query(func.max(PlaylistTrackSnapshot.snapshot_date))\
             .join(Playlist)\
             .filter(Playlist.market == market)\
             .scalar()
         
+        # If no data exists or data is stale (not from today), trigger fresh ingestion
+        if not latest_snapshot_date or latest_snapshot_date < today:
+            logger.info(
+                "Data is stale or missing, triggering fresh Spotify ingestion", 
+                market=market, 
+                latest_date=latest_snapshot_date.isoformat() if latest_snapshot_date else None,
+                today=today.isoformat()
+            )
+            
+            try:
+                # Trigger background ingestion
+                ingest_service = IngestionService(db)
+                await ingest_service.ingest_top_playlist(market=market)
+                logger.info("Fresh data ingestion completed", market=market)
+                
+                # Update latest snapshot date after ingestion
+                latest_snapshot_date = today
+                
+            except Exception as ingest_error:
+                logger.warning(
+                    "Fresh ingestion failed, using existing data if available", 
+                    market=market, 
+                    error=str(ingest_error)
+                )
+                # Continue with existing data if ingestion fails
+        
         if not latest_snapshot_date:
             raise HTTPException(
                 status_code=404,
-                detail=f"No chart data found for market {market}"
+                detail=f"No chart data found for market {market} and unable to fetch fresh data"
             )
         
         # Get tracks for that snapshot
@@ -1008,3 +1040,51 @@ async def init_sample_data(
         db.rollback()
         logger.error("Error initializing sample data", error=str(e))
         raise HTTPException(status_code=500, detail=f"Failed to initialize sample data: {str(e)}")
+
+
+@router.post("/admin/database/clear-and-refresh", response_model=dict)
+async def clear_database_and_refresh_spotify(
+    market: str = Query(default="IN", description="Market to refresh"),
+    admin_key: str = Depends(verify_admin_key),
+    db: Session = Depends(get_database)
+):
+    """
+    TEMPORARY: Clear database and fetch fresh Spotify Top 50 data
+    This will replace sample data with real Spotify data
+    """
+    market = validate_market(market)
+    logger = get_request_logger()
+    
+    logger.info("Clearing database and refreshing with real Spotify data", market=market)
+    
+    try:
+        # Clear existing data
+        db.query(PlaylistTrackSnapshot).delete()
+        db.query(Track).delete()
+        db.query(Artist).delete() 
+        db.query(Playlist).delete()
+        db.commit()
+        
+        logger.info("Database cleared, now fetching real Spotify data")
+        
+        # Force fresh ingestion from Spotify
+        ingest_service = IngestionService(db)
+        result = await ingest_service.ingest_top_playlist(market=market)
+        
+        logger.info("Fresh Spotify data ingested successfully", **result)
+        
+        return {
+            "success": True,
+            "message": f"Database cleared and refreshed with real Spotify Top 50 {market} data",
+            "tracks_processed": result.get("tracks_processed", 0),
+            "artists_processed": result.get("artists_processed", 0),
+            "snapshot_date": result.get("snapshot_date", "").isoformat() if result.get("snapshot_date") else ""
+        }
+        
+    except Exception as e:
+        db.rollback()
+        logger.error("Error clearing database and refreshing", market=market, error=str(e))
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Failed to clear and refresh database: {str(e)}"
+        )

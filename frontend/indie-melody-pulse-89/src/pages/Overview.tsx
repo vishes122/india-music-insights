@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Calendar, Music, TrendingUp, Users, PlayCircle, Sparkles } from 'lucide-react';
+import { Calendar, Music, TrendingUp, Users, PlayCircle, Sparkles, RefreshCw } from 'lucide-react';
 import { KPICard } from '@/components/KPICard';
 import { TrackTable } from '@/components/TrackTable';
 import { apiService, Track } from '@/lib/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from '@/hooks/use-toast';
 import heroBanner from '@/assets/hero-banner.jpg';
@@ -22,70 +23,106 @@ export default function Overview() {
   const [genreData, setGenreData] = useState<Array<{name: string, percentage: number}>>([]);
   const [topArtists, setTopArtists] = useState<Array<{name: string, track_count: number}>>([]);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState<string>('');
+
+  const fetchData = async (isRefresh = false) => {
+    try {
+      if (isRefresh) {
+        setRefreshing(true);
+      } else {
+        setLoading(true);
+      }
+      
+      console.log('[Overview] Starting API calls...');
+      
+      // Show toast for manual refresh
+      if (isRefresh) {
+        toast({
+          title: "🔄 Refreshing Data",
+          description: "Fetching latest Top 50 India tracks from Spotify...",
+        });
+      }
+        
+      // Fetch all data in parallel - let errors bubble up
+      const [tracksResponse, kpiResponse, genresResponse, artistsResponse] = await Promise.all([
+        apiService.getTopToday('IN'),
+        apiService.getKPIStats(),
+        apiService.getGenreDistribution(),
+        apiService.getTopArtistsByTracks(4),
+      ]);
+
+      console.log('[Overview] All API calls successful:', {
+        tracksResponse,
+        kpiResponse,
+        genresResponse,
+        artistsResponse
+      });
+
+      setTopTracks(tracksResponse.tracks?.slice(0, 50) || []);
+      setKpiData({
+        ...kpiResponse,
+        tracksGrowth: kpiResponse.tracksGrowth ?? '+0%',
+        artistsGrowth: kpiResponse.artistsGrowth ?? '+0%',
+      });
+      setGenreData(genresResponse.genres || []);
+      setTopArtists(artistsResponse.artists || []);
+      setLastUpdated(new Date().toLocaleString());
+      
+      // Show success toast for manual refresh
+      if (isRefresh) {
+        toast({
+          title: "✅ Data Refreshed",
+          description: `Updated with latest Top 50 India tracks (${tracksResponse.tracks?.length || 0} tracks)`,
+        });
+      }
+      
+    } catch (error) {
+      console.error('[Overview] CRITICAL ERROR - API calls failed completely:', error);
+      console.error('[Overview] Error details:', {
+        message: error.message,
+        stack: error.stack,
+        response: error.response,
+        config: error.config
+      });
+      
+      toast({
+        title: "API Connection Failed",
+        description: `Cannot connect to backend API: ${error.message}. Check console for details.`,
+        variant: "destructive",
+      });
+      
+      // Demo data fallback - but with indicators it's fake data
+      setTopTracks([]);
+      setKpiData({
+        lastSnapshotDate: new Date().toISOString(),
+        totalTracks: 0, // Set to 0 to clearly show API failure
+        totalArtists: 0,
+        totalGenres: 0,
+        tracksGrowth: '+0%',
+        artistsGrowth: '+0%',
+      });
+      setGenreData([]);
+      setTopArtists([]);
+    } finally {
+      setLoading(false);
+      setRefreshing(false);
+    }
+  };
+
+  const handleRefresh = () => fetchData(true);
 
   useEffect(() => {
     console.log('[Overview] mounted');
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        console.log('[Overview] Starting API calls...');
-        
-        // Fetch all data in parallel - let errors bubble up
-        const [tracksResponse, kpiResponse, genresResponse, artistsResponse] = await Promise.all([
-          apiService.getTopToday('IN'),
-          apiService.getKPIStats(),
-          apiService.getGenreDistribution(),
-          apiService.getTopArtistsByTracks(4),
-        ]);
-
-        console.log('[Overview] All API calls successful:', {
-          tracksResponse,
-          kpiResponse,
-          genresResponse,
-          artistsResponse
-        });
-
-        setTopTracks(tracksResponse.tracks?.slice(0, 50) || []);
-        setKpiData({
-          ...kpiResponse,
-          tracksGrowth: kpiResponse.tracksGrowth ?? '+0%',
-          artistsGrowth: kpiResponse.artistsGrowth ?? '+0%',
-        });
-        setGenreData(genresResponse.genres || []);
-        setTopArtists(artistsResponse.artists || []);
-      } catch (error) {
-        console.error('[Overview] CRITICAL ERROR - API calls failed completely:', error);
-        console.error('[Overview] Error details:', {
-          message: error.message,
-          stack: error.stack,
-          response: error.response,
-          config: error.config
-        });
-        
-        toast({
-          title: "API Connection Failed",
-          description: `Cannot connect to backend API: ${error.message}. Check console for details.`,
-          variant: "destructive",
-        });
-        
-        // Demo data fallback - but with indicators it's fake data
-        setTopTracks([]);
-        setKpiData({
-          lastSnapshotDate: new Date().toISOString(),
-          totalTracks: 0, // Set to 0 to clearly show API failure
-          totalArtists: 0,
-          totalGenres: 0,
-          tracksGrowth: '+0%',
-          artistsGrowth: '+0%',
-        });
-        setGenreData([]);
-        setTopArtists([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchData();
+    
+    // Set up auto-refresh every 30 minutes to get fresh data
+    const interval = setInterval(() => {
+      console.log('[Overview] Auto-refreshing data...');
+      handleRefresh();
+    }, 30 * 60 * 1000); // 30 minutes
+    
+    return () => clearInterval(interval);
   }, []);
 
   const formatDate = (dateString: string) => {
