@@ -1,0 +1,26 @@
+# Railway Environment Configuration
+# These variables will be set in Railway dashboard
+
+# Spotify API Credentials
+SPOTIFY_CLIENT_ID=6d1427d315ff436eb9fe8fc1c7c411fa
+SPOTIFY_CLIENT_SECRET=29a5d7ca90dc4602ae7bc759c937079d
+
+# Database Configuration
+DATABASE_URL=sqlite:///./india_music_insights.db
+
+# Security
+ADMIN_KEY=india_music_insights_admin_2025
+
+# Application Settings  
+MARKETS=IN,US,GB
+INDIA_TOP50_PLAYLIST_ID=6UVtJNwk37jcY3klgmfxFZ
+GLOBAL_TOP50_PLAYLIST_ID=37i9dQZEVXbMDoHDwVN2tF
+TIMEZONE=Asia/Kolkata
+
+# Railway Specific
+ENABLE_SCHEDULER=True
+PORT=8000
+ENV=production
+
+# CORS Origins - Include Vercel domain
+CORS_ORIGINS=https://india-music-insights.vercel.app,http://localhost:3000,http://localhost:8081
