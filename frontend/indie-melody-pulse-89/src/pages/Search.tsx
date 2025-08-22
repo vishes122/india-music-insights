@@ -217,12 +217,12 @@ export default function Search() {
                   <CardTitle className="flex items-center space-x-2">
                     <User className="h-5 w-5" />
                     <span>Artists</span>
-                    <Badge variant="secondary">{searchResults.artists.items.length}</Badge>
+                    <Badge variant="secondary">{(searchResults.artists?.items || []).length}</Badge>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    {searchResults.artists.items.slice(0, 6).map((artist: Artist) => (
+                    {(searchResults.artists?.items || []).slice(0, 6).map((artist: Artist) => (
                       <div
                         key={artist.id}
                         className="group p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-muted/50 transition-all duration-300 cursor-pointer"
@@ -264,12 +264,12 @@ export default function Search() {
                   <CardTitle className="flex items-center space-x-2">
                     <Music className="h-5 w-5" />
                     <span>Tracks</span>
-                    <Badge variant="secondary">{searchResults.tracks.items.length}</Badge>
+                    <Badge variant="secondary">{(searchResults.tracks?.items || []).length}</Badge>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    {searchResults.tracks.items.slice(0, 10).map((track: Track) => (
+                    {(searchResults.tracks?.items || []).slice(0, 10).map((track: Track) => (
                       <div
                         key={track.id}
                         className="group flex items-center space-x-4 p-3 rounded-lg hover:bg-muted/50 transition-all duration-200"
@@ -354,7 +354,7 @@ export default function Search() {
               </div>
             ) : searchResults.artists?.items && searchResults.artists.items.length > 0 ? (
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
-                {searchResults.artists.items.map((artist: Artist) => (
+                {(searchResults.artists?.items || []).map((artist: Artist) => (
                   <Card key={artist.id} className="group hover:shadow-elegant transition-all duration-300">
                     <CardContent className="p-4">
                       <div className="flex items-center space-x-3">
@@ -423,7 +423,7 @@ export default function Search() {
               <Card className="animate-fade-in">
                 <CardContent className="p-6">
                   <div className="space-y-2">
-                    {searchResults.tracks.items.map((track: Track) => (
+                    {(searchResults.tracks?.items || []).map((track: Track) => (
                       <div
                         key={track.id}
                         className="group flex items-center space-x-4 p-3 rounded-lg hover:bg-muted/50 transition-all duration-200"

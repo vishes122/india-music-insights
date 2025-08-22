@@ -40,18 +40,18 @@ export default function YearExplorer() {
       if (activeTab === 'tracks') {
         // Use our powerful historical search
         const response = await apiService.searchTracksByYear(selectedYear, searchQuery, 50);
-        setTopTracks(response.tracks.map((track, index) => ({
+        setTopTracks((response.tracks || []).map((track, index) => ({
           ...track,
           rank: index + 1
         })));
       } else if (activeTab === 'artists') {
         // Get artists from the year's tracks
         const response = await apiService.getTopArtists(selectedYear, selectedMarket);
-        setTopArtists(response.artists);
+        setTopArtists(response.artists || []);
       } else if (activeTab === 'genres') {
         // Get genre data (mock for now)
         const response = await apiService.getTopGenres(selectedYear, selectedMarket);
-        setTopGenres(response.genres);
+        setTopGenres(response.genres || []);
       }
     } catch (error) {
       console.error('Failed to fetch year data:', error);
