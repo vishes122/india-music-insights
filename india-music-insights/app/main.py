@@ -88,23 +88,24 @@ app = FastAPI(
 # Add middleware
 app.add_middleware(RequestContextMiddleware)
 
-# CORS Configuration - Use environment variable for origins
-allowed_origins = []
-if settings.is_development:
-    # Development: Allow common dev server ports
-    allowed_origins = [
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "http://localhost:8080",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:8080"
-    ]
-else:
-    # Production: Use configured CORS origins + Vercel domain
-    allowed_origins = settings.cors_origins_list + [
-        "https://india-music-insights.vercel.app"
-    ]
+# CORS Configuration - Always allow Vercel domain
+allowed_origins = [
+    "https://india-music-insights.vercel.app",  # Always allow Vercel
+    "http://localhost:3000",
+    "http://localhost:5173", 
+    "http://localhost:8080",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:8080"
+]
+
+# Add any additional origins from environment
+if settings.cors_origins_list:
+    for origin in settings.cors_origins_list:
+        if origin not in allowed_origins:
+            allowed_origins.append(origin)
+
+print(f"🌐 CORS allowed origins: {allowed_origins}")
 
 app.add_middleware(
     CORSMiddleware,
