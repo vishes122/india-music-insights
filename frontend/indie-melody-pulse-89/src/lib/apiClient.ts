@@ -1,10 +1,17 @@
 import axios from 'axios';
 
-// API Configuration - Debug logging
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+// API Configuration - Debug logging with protocol fix
+let API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
+// Ensure protocol is included
+if (API_BASE_URL && !API_BASE_URL.startsWith('http')) {
+  API_BASE_URL = `https://${API_BASE_URL}`;
+}
+
 console.log('[API CLIENT] Environment variables:', {
   VITE_API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
-  API_BASE_URL: API_BASE_URL,
+  API_BASE_URL_ORIGINAL: import.meta.env.VITE_API_BASE_URL,
+  API_BASE_URL_FIXED: API_BASE_URL,
   fullBaseURL: `${API_BASE_URL}/v1`
 });
 
