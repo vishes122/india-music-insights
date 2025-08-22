@@ -88,12 +88,12 @@ app = FastAPI(
 # Add middleware
 app.add_middleware(RequestContextMiddleware)
 
-# CORS Configuration - Always allow Vercel domain
+# CORS Configuration - Allow specific origins
 allowed_origins = [
-    "https://india-music-insights.vercel.app",  # Always allow Vercel
-    "http://localhost:3000",
-    "http://localhost:5173", 
-    "http://localhost:8080",
+    "https://india-music-insights.vercel.app",  # Production Vercel domain
+    "http://localhost:3000",                    # Local React dev server
+    "http://localhost:5173",                    # Local Vite dev server
+    "http://localhost:8080",                    # Alternative local server
     "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
     "http://127.0.0.1:8080"
