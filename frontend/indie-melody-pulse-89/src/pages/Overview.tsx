@@ -28,38 +28,22 @@ export default function Overview() {
     const fetchData = async () => {
       try {
         setLoading(true);
+        console.log('[Overview] Starting API calls...');
         
-        // Fetch all data in parallel
+        // Fetch all data in parallel - let errors bubble up
         const [tracksResponse, kpiResponse, genresResponse, artistsResponse] = await Promise.all([
-          apiService.getTopToday('IN').catch((error) => {
-            console.error('[Overview] Failed to fetch top tracks:', error);
-            toast({
-              title: "API Connection Error",
-              description: `Failed to load today's top tracks: ${error.message}`,
-              variant: "destructive",
-            });
-            return { tracks: [], total: 0, snapshot_id: '', last_updated: '' };
-          }),
-          apiService.getKPIStats().catch((error) => {
-            console.error('[Overview] Failed to fetch KPI stats:', error);
-            return {
-              lastSnapshotDate: new Date().toISOString(),
-              totalTracks: 0,
-              totalArtists: 0,
-              totalGenres: 0,
-              tracksGrowth: '+0%',
-              artistsGrowth: '+0%',
-            };
-          }),
-          apiService.getGenreDistribution().catch((error) => {
-            console.error('[Overview] Failed to fetch genre distribution:', error);
-            return { genres: [], total_tracks: 0, fetched_at: '' };
-          }),
-          apiService.getTopArtistsByTracks(4).catch((error) => {
-            console.error('[Overview] Failed to fetch top artists:', error);
-            return { artists: [], total: 0, fetched_at: '' };
-          }),
+          apiService.getTopToday('IN'),
+          apiService.getKPIStats(),
+          apiService.getGenreDistribution(),
+          apiService.getTopArtistsByTracks(4),
         ]);
+
+        console.log('[Overview] All API calls successful:', {
+          tracksResponse,
+          kpiResponse,
+          genresResponse,
+          artistsResponse
+        });
 
         setTopTracks(tracksResponse.tracks?.slice(0, 50) || []);
         setKpiData({
@@ -70,35 +54,32 @@ export default function Overview() {
         setGenreData(genresResponse.genres || []);
         setTopArtists(artistsResponse.artists || []);
       } catch (error) {
-        console.error('Failed to fetch overview data:', error);
+        console.error('[Overview] CRITICAL ERROR - API calls failed completely:', error);
+        console.error('[Overview] Error details:', {
+          message: error.message,
+          stack: error.stack,
+          response: error.response,
+          config: error.config
+        });
+        
         toast({
-          title: "Error loading data",
-          description: "Failed to load overview data. Using demo data instead.",
+          title: "API Connection Failed",
+          description: `Cannot connect to backend API: ${error.message}. Check console for details.`,
           variant: "destructive",
         });
         
-        // Demo data fallback
+        // Demo data fallback - but with indicators it's fake data
         setTopTracks([]);
         setKpiData({
           lastSnapshotDate: new Date().toISOString(),
-          totalTracks: 55,
-          totalArtists: 62,
-          totalGenres: 8,
-          tracksGrowth: '+12%',
-          artistsGrowth: '+8%',
+          totalTracks: 0, // Set to 0 to clearly show API failure
+          totalArtists: 0,
+          totalGenres: 0,
+          tracksGrowth: '+0%',
+          artistsGrowth: '+0%',
         });
-        setGenreData([
-          { name: 'Bollywood', percentage: 85 },
-          { name: 'Pop', percentage: 70 },
-          { name: 'Hip-Hop', percentage: 55 },
-          { name: 'Classical', percentage: 40 }
-        ]);
-        setTopArtists([
-          { name: 'Aditya Rikhari', track_count: 11 },
-          { name: 'Anuv Jain', track_count: 5 },
-          { name: 'Arijit Singh', track_count: 4 },
-          { name: 'Faheem Abdullah', track_count: 3 }
-        ]);
+        setGenreData([]);
+        setTopArtists([]);
       } finally {
         setLoading(false);
       }

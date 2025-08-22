@@ -1,7 +1,12 @@
 import axios from 'axios';
 
-// API Configuration - Updated to work with local backend
+// API Configuration - Debug logging
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+console.log('[API CLIENT] Environment variables:', {
+  VITE_API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
+  API_BASE_URL: API_BASE_URL,
+  fullBaseURL: `${API_BASE_URL}/v1`
+});
 
 // Create axios instance with default config
 const apiClient = axios.create({
@@ -12,10 +17,37 @@ const apiClient = axios.create({
   },
 });
 
+// Request interceptor for debugging
+apiClient.interceptors.request.use(
+  (config) => {
+    console.log('[API REQUEST]', config.method?.toUpperCase(), config.url, 'Full URL:', `${config.baseURL}${config.url}`);
+    return config;
+  },
+  (error) => {
+    console.error('[API REQUEST ERROR]', error);
+    return Promise.reject(error);
+  }
+);
+
 // Response interceptor for error handling
 apiClient.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    console.log('[API SUCCESS]', response.config.method?.toUpperCase(), response.config.url, '→', response.status);
+    return response;
+  },
   (error) => {
+    console.error('[API ERROR] Full error details:', {
+      message: error.message,
+      code: error.code,
+      status: error.response?.status,
+      statusText: error.response?.statusText,
+      url: error.config?.url,
+      method: error.config?.method,
+      baseURL: error.config?.baseURL,
+      data: error.response?.data,
+      headers: error.response?.headers
+    });
+    
     if (error.code === 'ECONNABORTED') {
       console.error('Request timeout');
     } else if (error.response?.status >= 500) {
