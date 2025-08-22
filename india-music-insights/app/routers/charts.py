@@ -62,16 +62,46 @@ async def get_today_chart(
             .scalar()
         
         # If no data exists or data is stale (not from today), trigger fresh ingestion
+        # Also check if we have sample data (only 4-5 tracks) and force refresh
         if not latest_snapshot_date or latest_snapshot_date < today:
+            should_refresh = True
+            refresh_reason = "stale_data"
+        else:
+            # Check if we have very few tracks (likely sample data)
+            track_count = db.query(func.count(PlaylistTrackSnapshot.id))\
+                .join(Playlist)\
+                .filter(
+                    and_(
+                        Playlist.market == market,
+                        PlaylistTrackSnapshot.snapshot_date == latest_snapshot_date
+                    )
+                ).scalar()
+            
+            if track_count <= 5:  # Sample data detection
+                should_refresh = True
+                refresh_reason = "sample_data_detected"
+            else:
+                should_refresh = False
+        
+        if should_refresh:
             logger.info(
-                "Data is stale or missing, triggering fresh Spotify ingestion", 
+                "Triggering fresh Spotify ingestion", 
                 market=market, 
+                reason=refresh_reason,
                 latest_date=latest_snapshot_date.isoformat() if latest_snapshot_date else None,
-                today=today.isoformat()
+                today=today.isoformat(),
+                existing_tracks=track_count if 'track_count' in locals() else 0
             )
             
             try:
-                # Trigger background ingestion
+                # Clear existing data for this market to prevent conflicts
+                db.query(PlaylistTrackSnapshot)\
+                    .join(Playlist)\
+                    .filter(Playlist.market == market)\
+                    .delete(synchronize_session=False)
+                db.commit()
+                
+                # Trigger fresh ingestion
                 ingest_service = IngestionService(db)
                 await ingest_service.ingest_top_playlist(market=market)
                 logger.info("Fresh data ingestion completed", market=market)
