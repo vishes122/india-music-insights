@@ -175,21 +175,21 @@ export default function Overview() {
             />
             <KPICard
               title="Total Tracks"
-              value={kpiData.totalTracks.toLocaleString()}
+              value={kpiData?.totalTracks?.toLocaleString() || '0'}
               subtitle="In database"
               icon={Music}
               trend={{
-                value: parseInt(kpiData.tracksGrowth?.replace(/[^0-9]/g, '') || '0'),
+                value: parseInt(kpiData?.tracksGrowth?.replace(/[^0-9]/g, '') || '0'),
                 label: "vs last week"
               }}
             />
             <KPICard
               title="Total Artists"
-              value={kpiData.totalArtists.toLocaleString()}
+              value={kpiData?.totalArtists?.toLocaleString() || '0'}
               subtitle="Unique artists"
               icon={Users}
               trend={{
-                value: parseInt(kpiData.artistsGrowth?.replace(/[^0-9]/g, '') || '0'),
+                value: parseInt(kpiData?.artistsGrowth?.replace(/[^0-9]/g, '') || '0'),
                 label: "vs last week"
               }}
             />
