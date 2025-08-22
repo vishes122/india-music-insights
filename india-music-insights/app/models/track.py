@@ -59,6 +59,9 @@ class Track(BaseModel):
     name = Column(String(500), nullable=False, index=True)
     album = Column(String(500))
     album_release_date = Column(String(20))  # YYYY-MM-DD format
+    album_image_url = Column(String(500))  # Album cover image URL
+    album_image_width = Column(Integer)    # Image dimensions
+    album_image_height = Column(Integer)
     duration_ms = Column(Integer)
     explicit = Column(Boolean, default=False)
     popularity = Column(Integer, default=0)

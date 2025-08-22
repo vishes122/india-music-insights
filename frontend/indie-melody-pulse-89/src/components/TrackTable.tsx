@@ -41,8 +41,12 @@ const TrackRow: React.FC<TrackRowProps> = ({ track, index }) => {
     return validArtists.join(', ');
   };
 
-  const getAlbumImage = (album: any): string => {
-    // Since we don't have album images from the backend, use placeholder
+  const getAlbumImage = (track: Track): string => {
+    // Use the new album image URL from backend
+    if (track.album_image_url) {
+      return track.album_image_url;
+    }
+    // Fallback to placeholder
     return '/placeholder.svg';
   };
 
@@ -80,9 +84,9 @@ const TrackRow: React.FC<TrackRowProps> = ({ track, index }) => {
           {index + 1}
         </span>
         <img
-          src={getAlbumImage((track as any).album)}
+          src={getAlbumImage(track)}
           alt={getAlbumName((track as any).album) || 'Album cover'}
-          className="w-12 h-12 rounded-md object-cover"
+          className="w-12 h-12 rounded-md object-cover shadow-sm"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = '/placeholder.svg';
@@ -139,9 +143,9 @@ const TrackRow: React.FC<TrackRowProps> = ({ track, index }) => {
 
         <div className="col-span-1">
           <img
-            src={getAlbumImage((track as any).album)}
+            src={getAlbumImage(track)}
             alt={getAlbumName((track as any).album) || 'Album cover'}
-            className="w-12 h-12 rounded-md object-cover"
+            className="w-12 h-12 rounded-md object-cover shadow-sm"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = '/placeholder.svg';

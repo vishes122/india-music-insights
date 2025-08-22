@@ -15,6 +15,9 @@ class ChartTrack(BaseModel):
     track_name: str
     artists: List[str]
     album: Optional[str] = None
+    album_image_url: Optional[str] = None
+    album_image_width: Optional[int] = None
+    album_image_height: Optional[int] = None
     release_date: Optional[str] = None
     popularity: int
     spotify_url: Optional[str] = None

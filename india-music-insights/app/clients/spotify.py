@@ -184,7 +184,7 @@ class SpotifyClient:
         params = {
             "market": "IN",
             "limit": limit,
-            "fields": "items(track(id,name,artists(id,name),album(id,name,release_date),popularity,external_urls))"
+            "fields": "items(track(id,name,artists(id,name),album(id,name,release_date,images),popularity,external_urls,preview_url,duration_ms,explicit))"
         }
         return await self._make_request("GET", endpoint, params=params)
     

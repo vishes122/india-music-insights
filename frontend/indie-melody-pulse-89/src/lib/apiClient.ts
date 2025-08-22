@@ -75,6 +75,9 @@ export interface Track {
   name?: string; // Some APIs might return 'name' instead of 'track_name'
   artists: string[] | any[]; // Can be array of strings or artist objects
   album?: string;
+  album_image_url?: string;
+  album_image_width?: number;
+  album_image_height?: number;
   release_date?: string;
   popularity: number;
   spotify_url?: string;

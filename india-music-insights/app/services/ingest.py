@@ -331,11 +331,28 @@ class IngestionService:
         """Create Track instance from Spotify data"""
         album_data = track_data.get("album", {})
         
+        # Extract album image (preferably 640x640, fallback to largest available)
+        album_images = album_data.get("images", [])
+        album_image_url = None
+        album_image_width = None
+        album_image_height = None
+        
+        if album_images:
+            # Sort by size (largest first) and take the best quality image
+            sorted_images = sorted(album_images, key=lambda x: x.get('width', 0) * x.get('height', 0), reverse=True)
+            best_image = sorted_images[0]
+            album_image_url = best_image.get('url')
+            album_image_width = best_image.get('width')
+            album_image_height = best_image.get('height')
+        
         return Track(
             spotify_id=track_data["id"],
             name=track_data["name"],
             album=album_data.get("name"),
             album_release_date=album_data.get("release_date"),
+            album_image_url=album_image_url,
+            album_image_width=album_image_width,
+            album_image_height=album_image_height,
             duration_ms=track_data.get("duration_ms"),
             explicit=track_data.get("explicit", False),
             popularity=track_data.get("popularity", 0),
@@ -346,6 +363,16 @@ class IngestionService:
     def _update_track_from_data(self, track: Track, track_data: Dict[str, Any]):
         """Update Track instance with fresh Spotify data"""
         album_data = track_data.get("album", {})
+        
+        # Extract album image (preferably 640x640, fallback to largest available)
+        album_images = album_data.get("images", [])
+        if album_images:
+            # Sort by size (largest first) and take the best quality image
+            sorted_images = sorted(album_images, key=lambda x: x.get('width', 0) * x.get('height', 0), reverse=True)
+            best_image = sorted_images[0]
+            track.album_image_url = best_image.get('url')
+            track.album_image_width = best_image.get('width')
+            track.album_image_height = best_image.get('height')
         
         track.name = track_data["name"]
         track.album = album_data.get("name") or track.album
