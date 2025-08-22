@@ -902,10 +902,11 @@ async def get_top_artists(
 
 @router.post("/admin/sample-data/init", response_model=dict)
 async def init_sample_data(
+    admin_key: str = Depends(verify_admin_key),
     db: Session = Depends(get_database)
 ):
     """
-    Initialize database with sample data for testing (PUBLIC FOR SETUP)
+    Initialize database with sample data for testing
     """
     logger = get_request_logger()
     
