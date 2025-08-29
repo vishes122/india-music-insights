@@ -16,6 +16,37 @@ This README is your single, authoritative reference. It explains the project hie
 - Extend and maintain
 - Troubleshooting
 - Author
+## Screenshots
+
+### Screenshot 1
+![Screenshot 2025-08-29 112422](./Screenshot%202025-08-29%20112422.png)
+
+### Screenshot 2
+![Screenshot 2025-08-29 112447](./Screenshot%202025-08-29%20112447.png)
+
+### Screenshot 3
+![Screenshot 2025-08-29 112506](./Screenshot%202025-08-29%20112506.png)
+
+### Screenshot 4
+![Screenshot 2025-08-29 112519](./Screenshot%202025-08-29%20112519.png)
+
+### Screenshot 5
+![Screenshot 2025-08-29 112541](./Screenshot%202025-08-29%20112541.png)
+
+### Screenshot 6
+![Screenshot 2025-08-29 112554](./Screenshot%202025-08-29%20112554.png)
+
+### Screenshot 7
+![Screenshot 2025-08-29 112717](./Screenshot%202025-08-29%20112717.png)
+
+### Screenshot 8
+![Screenshot 2025-08-29 112730](./Screenshot%202025-08-29%20112730.png)
+
+### Screenshot 9
+![Screenshot 2025-08-29 112750](./Screenshot%202025-08-29%20112750.png)
+
+### Screenshot 10
+![Screenshot 2025-08-29 112805](./Screenshot%202025-08-29%20112805.png)
 
 ## High-level architecture
 - Backend (FastAPI + SQLAlchemy + SQLite)
