@@ -19,34 +19,34 @@ This README is your single, authoritative reference. It explains the project hie
 ## Screenshots
 
 ### Screenshot 1
-![Screenshot 2025-08-29 112422](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112422.png)
-
-### Screenshot 2
-![Screenshot 2025-08-29 112447](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112447.png)
-
-### Screenshot 3
-![Screenshot 2025-08-29 112506](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112506.png)
-
-### Screenshot 4
-![Screenshot 2025-08-29 112519](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112519.png)
-
-### Screenshot 5
-![Screenshot 2025-08-29 112541](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112541.png)
-
-### Screenshot 6
-![Screenshot 2025-08-29 112554](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112554.png)
-
-### Screenshot 7
-![Screenshot 2025-08-29 112717](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112717.png)
-
-### Screenshot 8
-![Screenshot 2025-08-29 112730](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112730.png)
-
-### Screenshot 9
 ![Screenshot 2025-08-29 112750](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112750.png)
 
-### Screenshot 10
+### Screenshot 2
 ![Screenshot 2025-08-29 112805](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112805.png)
+
+### Screenshot 3
+![Screenshot 2025-08-29 112422](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112422.png)
+
+### Screenshot 4
+![Screenshot 2025-08-29 112447](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112447.png)
+
+### Screenshot 5
+![Screenshot 2025-08-29 112506](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112506.png)
+
+### Screenshot 6
+![Screenshot 2025-08-29 112519](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112519.png)
+
+### Screenshot 7
+![Screenshot 2025-08-29 112541](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112541.png)
+
+### Screenshot 8
+![Screenshot 2025-08-29 112554](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112554.png)
+
+### Screenshot 9
+![Screenshot 2025-08-29 112717](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112717.png)
+
+### Screenshot 10
+![Screenshot 2025-08-29 112730](./frontend/indie-melody-pulse-89/public/Screenshot%202025-08-29%20112730.png)
 
 ## High-level architecture
 - Backend (FastAPI + SQLAlchemy + SQLite)
